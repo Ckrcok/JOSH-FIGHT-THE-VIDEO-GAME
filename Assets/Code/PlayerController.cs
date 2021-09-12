@@ -6,6 +6,10 @@ public class PlayerController : MonoBehaviour
 {
 
     Rigidbody2D rb2d;
+
+    Animator anime;
+
+
     float horizontal, vertical, moveX,moveY;
 
     public bool damage;
@@ -16,11 +20,15 @@ public class PlayerController : MonoBehaviour
 
     float speed = 2.0f;
 
+    bool moving;
+
     // Start is called before the first frame update
     void Start()
     {
         damage = false;
+        moving = false;
         rb2d = gameObject.GetComponent<Rigidbody2D>();
+        anime = gameObject.GetComponent<Animator>();
         uiInfo = GameObject.Find("Canvas");
     }
 
@@ -32,33 +40,47 @@ public class PlayerController : MonoBehaviour
         ////float velX = horizontal *10;
         //Vector2 vel = new Vector2(horizontal/2, vertical.).normalized;
         //rb2d.velocity = vel*speed;
-        //Camera.main.transform.position = new Vector3(0, Camera.main.transform.position.y/(transform.position.y*0.3f),-10);
+        Camera.main.transform.position = new Vector3(transform.position.x, transform.position.y,-10);
+        anime.SetBool("Moving", moving);
+
         if (Input.GetKey(KeyCode.LeftShift) && uiInfo.GetComponent<UIcontroller>().stamina > 0)
         {
             speed = 4.0f;
             uiInfo.GetComponent<UIcontroller>().stamina -= 0.3f;
+            anime.speed = 1.5f;
         }
         else if (uiInfo.GetComponent<UIcontroller>().stamina <= 100)
         {
             speed = 2.0f;
             uiInfo.GetComponent<UIcontroller>().stamina += 0.2f;
+            anime.speed = 1f;
         }
         else
         {
             speed = 2.0f;
+            anime.speed = 1f;
         }
 
-
-
+        //if (Input.GetKey(KeyCode.Space))
+        //{
+            
+        //    rb2d.AddForce(new Vector2(rb2d.velocity.x * 4, rb2d.velocity.y * 4));
+        //    damage = true;
+        //}
+        
 
 
         if (Input.GetKey(KeyCode.D))
         {
             moveX = 1;
+            transform.eulerAngles = new Vector2(0, 0);
+
+
         }
         else if (Input.GetKey(KeyCode.A))
         {
             moveX = -1;
+            transform.eulerAngles = new Vector2(0, 180);
         }
         else
         {
@@ -77,7 +99,14 @@ public class PlayerController : MonoBehaviour
             moveY = 0;
         }
 
-        
+        if(rb2d.velocity.x >0 || rb2d.velocity.x < 0 || rb2d.velocity.y > 0 || rb2d.velocity.y < 0 )
+        {
+            moving = true;
+        }
+        else if(rb2d.velocity.x == 0 || rb2d.velocity.y == 0)
+        {
+            moving = false;
+        }
 
 
 
@@ -95,7 +124,7 @@ public class PlayerController : MonoBehaviour
         else if (damage)
         {
             timer++;
-            if (timer is 25)
+            if (timer is 15)
             {
                 damage = false;
                 timer = 0;
