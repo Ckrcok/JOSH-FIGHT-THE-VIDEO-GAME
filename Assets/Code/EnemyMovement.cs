@@ -18,6 +18,7 @@ public class EnemyMovement : MonoBehaviour
     int timer;
 
 
+
     private Rigidbody2D rb;
     private Vector2 movement;
 
@@ -37,19 +38,24 @@ public class EnemyMovement : MonoBehaviour
         direction.Normalize();
         movement = direction;
 
-        if(health < 0)
+        if(health <= 0)
         {
             Destroy(gameObject);
         }
+
+        transform.GetChild(0).transform.localScale = new Vector2 (health / 150,0.05f);
     }
 
     private void FixedUpdate()
     {
         //print(Vector2.Distance(player.position, transform.position));
 
-            if (!damaged && Vector2.Distance(player.position, transform.position) > bufferDistance)
-                moveCharacter(movement);
-        
+        if (!damaged && Vector2.Distance(player.position, transform.position) > bufferDistance)
+        {
+            rb.velocity = new Vector2(0, 0);
+            moveCharacter(movement);
+        }
+
         else if (damaged)
         {
             timer++;

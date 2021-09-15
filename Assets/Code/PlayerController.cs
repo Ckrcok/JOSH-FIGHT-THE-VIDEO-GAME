@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     float horizontal, vertical, moveX,moveY;
 
     public bool damage;
+    public bool attack;
 
     GameObject uiInfo;
 
@@ -48,6 +49,8 @@ public class PlayerController : MonoBehaviour
         //rb2d.velocity = vel*speed;
         Camera.main.transform.position = new Vector3(transform.position.x, transform.position.y,-10);
         anime.SetBool("Moving", moving);
+        
+        print(attack);
 
         if (Input.GetKey(KeyCode.LeftShift) && uiInfo.GetComponent<UIcontroller>().stamina > 0)
         {
@@ -69,6 +72,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
+
             SlashAttack();
         }
 
@@ -122,7 +126,6 @@ public class PlayerController : MonoBehaviour
 
 
 
-
     }
 
     private void FixedUpdate()
@@ -154,7 +157,9 @@ public class PlayerController : MonoBehaviour
 
     void SlashAttack()
     {
+        anime.SetTrigger("Attack");
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackArea.position, attackRange, enemyLayers);
+
 
         foreach(Collider2D enemy in hitEnemies)
         {
@@ -172,8 +177,10 @@ public class PlayerController : MonoBehaviour
                 print("rotated");
                 enemy.gameObject.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(300, 0));
             }
+
             //enemy.gameObject.GetComponent<Rigidbody2D>().AddForce
         }
+        
     }
 
 
