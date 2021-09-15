@@ -9,6 +9,11 @@ public class PlayerController : MonoBehaviour
 
     Animator anime;
 
+    //attack variables
+    public Transform attackArea;
+    public float attackRange = 0.5f;
+    public LayerMask enemyLayers;
+   
 
     float horizontal, vertical, moveX,moveY;
 
@@ -30,6 +35,7 @@ public class PlayerController : MonoBehaviour
         rb2d = gameObject.GetComponent<Rigidbody2D>();
         anime = gameObject.GetComponent<Animator>();
         uiInfo = GameObject.Find("Canvas");
+        //attackArea = GetComponentInChildren<Transform>();
     }
 
     // Update is called once per frame
@@ -59,6 +65,11 @@ public class PlayerController : MonoBehaviour
         {
             speed = 2.0f;
             anime.speed = 1f;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            SlashAttack();
         }
 
         //if (Input.GetKey(KeyCode.Space))
@@ -140,4 +151,25 @@ public class PlayerController : MonoBehaviour
         }
 
     }
+
+    void SlashAttack()
+    {
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackArea.position, attackRange, enemyLayers);
+
+        foreach(Collider2D enemy in hitEnemies)
+        {
+            print("hit" + enemy.name);
+            enemy.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(-enemy.gameObject.GetComponent<Rigidbody2D>().velocity.x, -enemy.gameObject.GetComponent<Rigidbody2D>().velocity.y);
+        }
+    }
+
+
+    private void OnDrawGizmosSelected()
+    {
+        if(attackArea == null)
+            return;
+        
+        Gizmos.DrawWireSphere(attackArea.position, attackRange);
+    }
+
 }

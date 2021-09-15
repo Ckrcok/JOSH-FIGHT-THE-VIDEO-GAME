@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
+
+
     public Transform player;
     public float moveSpeed = 5f;
+
+    public float bufferDistance;
+
+
     private Rigidbody2D rb;
     private Vector2 movement;
 
@@ -25,7 +31,9 @@ public class EnemyMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        moveCharacter(movement);
+        //print(Vector2.Distance(player.position, transform.position));
+        if ( Vector2.Distance(player.position, transform.position) > bufferDistance)
+            moveCharacter(movement);
     }
 
     void moveCharacter(Vector2 direction)
