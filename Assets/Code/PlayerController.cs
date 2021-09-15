@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift) && uiInfo.GetComponent<UIcontroller>().stamina > 0)
         {
             speed = 4.0f;
-            uiInfo.GetComponent<UIcontroller>().stamina -= 0.3f;
+            uiInfo.GetComponent<UIcontroller>().stamina -= 0.03f;
             anime.speed = 1.5f;
         }
         else if (uiInfo.GetComponent<UIcontroller>().stamina <= 100)
@@ -159,7 +159,20 @@ public class PlayerController : MonoBehaviour
         foreach(Collider2D enemy in hitEnemies)
         {
             print("hit" + enemy.name);
-            enemy.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(-enemy.gameObject.GetComponent<Rigidbody2D>().velocity.x, -enemy.gameObject.GetComponent<Rigidbody2D>().velocity.y);
+            print(transform.rotation.eulerAngles);
+            enemy.GetComponent<EnemyMovement>().damaged = true;
+            enemy.GetComponent<EnemyMovement>().health -= 10;
+            if (transform.rotation.eulerAngles.y == 180)
+            {
+                print("rotated");
+                enemy.gameObject.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(-300,0));
+            }
+            else if (transform.rotation.eulerAngles.y == 0)
+            {
+                print("rotated");
+                enemy.gameObject.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(300, 0));
+            }
+            //enemy.gameObject.GetComponent<Rigidbody2D>().AddForce
         }
     }
 

@@ -11,6 +11,12 @@ public class EnemyMovement : MonoBehaviour
 
     public float bufferDistance;
 
+    public float health;
+
+    public bool damaged;
+
+    int timer;
+
 
     private Rigidbody2D rb;
     private Vector2 movement;
@@ -19,6 +25,9 @@ public class EnemyMovement : MonoBehaviour
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
+        health = 100;
+
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     // Update is called once per frame
@@ -27,13 +36,30 @@ public class EnemyMovement : MonoBehaviour
         Vector3 direction = player.position - transform.position;
         direction.Normalize();
         movement = direction;
+
+        if(health < 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void FixedUpdate()
     {
         //print(Vector2.Distance(player.position, transform.position));
-        if ( Vector2.Distance(player.position, transform.position) > bufferDistance)
-            moveCharacter(movement);
+
+            if (!damaged && Vector2.Distance(player.position, transform.position) > bufferDistance)
+                moveCharacter(movement);
+        
+        else if (damaged)
+        {
+            timer++;
+            if (timer is 10)
+            {
+                rb.velocity = new Vector2(0, 0);
+                damaged = false;
+                timer = 0;
+            }
+        }
     }
 
     void moveCharacter(Vector2 direction)
