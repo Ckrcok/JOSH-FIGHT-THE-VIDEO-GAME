@@ -6,4 +6,4 @@ Hey this is only for the jumping branch!
 
 Hey look a new thing in the readme file!
 
-Global Warming - 😂
+Global Warming - 
