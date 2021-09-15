@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     public Transform attackArea;
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
-   
+
 
     float horizontal, vertical, moveX,moveY;
 
@@ -78,11 +78,11 @@ public class PlayerController : MonoBehaviour
 
         //if (Input.GetKey(KeyCode.Space))
         //{
-            
+
         //    rb2d.AddForce(new Vector2(rb2d.velocity.x * 4, rb2d.velocity.y * 4));
         //    damage = true;
         //}
-        
+
 
 
         if (Input.GetKey(KeyCode.D))
@@ -188,7 +188,7 @@ public class PlayerController : MonoBehaviour
     {
         if(attackArea == null)
             return;
-        
+
         Gizmos.DrawWireSphere(attackArea.position, attackRange);
     }
 
