@@ -2,4 +2,4 @@
 
 Our trello Board - https://trello.com/b/Ngn0n74r/game-jam
 
-Hello
+Changing the readme to check the webhook
