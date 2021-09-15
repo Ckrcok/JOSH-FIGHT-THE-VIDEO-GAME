@@ -1,7 +1,31 @@
 fileFormatVersion: 2
-guid: 80b07b795c182e44381c6aba58e6da2f
+guid: d5582b28a29cf3f449b3bdfcd7aa8711
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -4980288558168829135
+    second: enemy-Redshirt-walk_0
+  - first:
+      213: -3534025832319988279
+    second: enemy-Redshirt-walk_2
+  - first:
+      213: -1450696276713680385
+    second: enemy-Redshirt-walk_4
+  - first:
+      213: 2427973471739887472
+    second: enemy-Redshirt-walk_5
+  - first:
+      213: 4407699976162982500
+    second: enemy-Redshirt-walk_6
+  - first:
+      213: 7274051783279041899
+    second: enemy-Redshirt-walk_7
+  - first:
+      213: 5814288141339135870
+    second: enemy-Redshirt-walk_8
+  - first:
+      213: -8143776262250266151
+    second: enemy-Redshirt-walk_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +65,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,22 +99,238 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: enemy-Redshirt-walk_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 9
+        width: 35
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 133976b61f572eab0800000000000000
+      internalID: -4980288558168829135
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy-Redshirt-walk_2
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 7
+        width: 40
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cd4385ca3e94fec0800000000000000
+      internalID: -3534025832319988279
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy-Redshirt-walk_4
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 6
+        width: 34
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff1df752c671edbe0800000000000000
+      internalID: -1450696276713680385
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy-Redshirt-walk_5
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 6
+        width: 34
+        height: 46
+      alignment: 9
+      pivot: {x: 0.4401963, y: 0.5080368}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07fb0233205e1b120800000000000000
+      internalID: 2427973471739887472
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy-Redshirt-walk_6
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 9
+        width: 37
+        height: 45
+      alignment: 9
+      pivot: {x: 0.32306898, y: 0.5030308}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46a31bb76cb4b2d30800000000000000
+      internalID: 4407699976162982500
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy-Redshirt-walk_7
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 8
+        width: 42
+        height: 45
+      alignment: 9
+      pivot: {x: 0.28363618, y: 0.5014957}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6dd42cae8f92f460800000000000000
+      internalID: 7274051783279041899
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy-Redshirt-walk_8
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 5
+        width: 39
+        height: 46
+      alignment: 9
+      pivot: {x: 0.3059614, y: 0.5178816}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7f0946524080b050800000000000000
+      internalID: 5814288141339135870
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy-Redshirt-walk_9
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 5
+        width: 35
+        height: 47
+      alignment: 9
+      pivot: {x: 0.3432408, y: 0.5261488}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d1805613ae7bfe80800000000000000
+      internalID: -8143776262250266151
+      vertices: []
+      indices:
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
-    indices: 
+    indices:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+  spritePackingTag:
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+  userData:
+  assetBundleName:
+  assetBundleVariant:

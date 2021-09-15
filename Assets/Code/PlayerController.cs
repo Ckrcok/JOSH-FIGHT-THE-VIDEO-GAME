@@ -9,6 +9,11 @@ public class PlayerController : MonoBehaviour
 
     Animator anime;
 
+    //attack variables
+    public Transform attackArea;
+    public float attackRange = 0.5f;
+    public LayerMask enemyLayers;
+
 
     float horizontal, vertical, moveX,moveY;
 
@@ -30,6 +35,7 @@ public class PlayerController : MonoBehaviour
         rb2d = gameObject.GetComponent<Rigidbody2D>();
         anime = gameObject.GetComponent<Animator>();
         uiInfo = GameObject.Find("Canvas");
+        //attackArea = GetComponentInChildren<Transform>();
     }
 
     // Update is called once per frame
@@ -46,7 +52,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift) && uiInfo.GetComponent<UIcontroller>().stamina > 0)
         {
             speed = 4.0f;
-            uiInfo.GetComponent<UIcontroller>().stamina -= 0.3f;
+            uiInfo.GetComponent<UIcontroller>().stamina -= 0.03f;
             anime.speed = 1.5f;
         }
         else if (uiInfo.GetComponent<UIcontroller>().stamina <= 100)
@@ -61,13 +67,18 @@ public class PlayerController : MonoBehaviour
             anime.speed = 1f;
         }
 
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            SlashAttack();
+        }
+
         //if (Input.GetKey(KeyCode.Space))
         //{
-            
+
         //    rb2d.AddForce(new Vector2(rb2d.velocity.x * 4, rb2d.velocity.y * 4));
         //    damage = true;
         //}
-        
+
 
 
         if (Input.GetKey(KeyCode.D))
@@ -140,4 +151,38 @@ public class PlayerController : MonoBehaviour
         }
 
     }
+
+    void SlashAttack()
+    {
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackArea.position, attackRange, enemyLayers);
+
+        foreach(Collider2D enemy in hitEnemies)
+        {
+            print("hit" + enemy.name);
+            print(transform.rotation.eulerAngles);
+            enemy.GetComponent<EnemyMovement>().damaged = true;
+            enemy.GetComponent<EnemyMovement>().health -= 10;
+            if (transform.rotation.eulerAngles.y == 180)
+            {
+                print("rotated");
+                enemy.gameObject.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(-300,0));
+            }
+            else if (transform.rotation.eulerAngles.y == 0)
+            {
+                print("rotated");
+                enemy.gameObject.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(300, 0));
+            }
+            //enemy.gameObject.GetComponent<Rigidbody2D>().AddForce
+        }
+    }
+
+
+    private void OnDrawGizmosSelected()
+    {
+        if(attackArea == null)
+            return;
+
+        Gizmos.DrawWireSphere(attackArea.position, attackRange);
+    }
+
 }
