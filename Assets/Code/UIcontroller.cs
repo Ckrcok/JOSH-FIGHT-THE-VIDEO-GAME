@@ -30,8 +30,16 @@ public class UIcontroller : MonoBehaviour
         livesUi.text = "Lives: " + lives;
         if (health <= 0)
         {
-            timer++;
-            if (timer is 100)
+            if(lives == 0)
+            {
+                FindObjectOfType<GameManager>().EndGame();
+            }
+            else
+            {
+                timer++;
+            }
+            
+            if(timer is 100)
             {
                 timer = 0;
                 health = 100;
