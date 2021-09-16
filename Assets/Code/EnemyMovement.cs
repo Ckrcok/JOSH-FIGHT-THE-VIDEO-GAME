@@ -7,9 +7,14 @@ public class EnemyMovement : MonoBehaviour
 
 
     public Transform player;
+
+    Animator anime;
+
     public float moveSpeed = 5f;
 
     public float bufferDistance;
+
+    float lastPos;
 
     public float health;
 
@@ -28,7 +33,13 @@ public class EnemyMovement : MonoBehaviour
         rb = this.GetComponent<Rigidbody2D>();
         health = 100;
 
+        bufferDistance = 1.5f;
+
         player = GameObject.FindGameObjectWithTag("Player").transform;
+
+        anime = gameObject.GetComponent<Animator>();
+
+
     }
 
     // Update is called once per frame
@@ -37,8 +48,20 @@ public class EnemyMovement : MonoBehaviour
         Vector3 direction = player.position - transform.position;
         direction.Normalize();
         movement = direction;
+        if (rb.velocity.x>0)
+        {
+            transform.eulerAngles = new Vector2(0, 0);
+        }
+        if (rb.velocity.x<0)
+        {
+            transform.eulerAngles = new Vector2(0, 180);
+        }
+       
+        //print("Current: " + movement.x + "    Last: " + lastPos);
 
-        if(health <= 0)
+
+
+        if (health <= 0)
         {
             Destroy(gameObject);
         }
@@ -52,8 +75,14 @@ public class EnemyMovement : MonoBehaviour
 
         if (!damaged && Vector2.Distance(player.position, transform.position) > bufferDistance)
         {
-            rb.velocity = new Vector2(0, 0);
+            //rb.velocity = new Vector2(0, 0);
             moveCharacter(movement);
+        }
+
+        else if(!damaged && Vector2.Distance(player.position, transform.position) < bufferDistance)
+        {
+            rb.velocity = new Vector2(0, 0);
+            //moveCharacter(movement);
         }
 
         else if (damaged)
@@ -70,6 +99,7 @@ public class EnemyMovement : MonoBehaviour
 
     void moveCharacter(Vector2 direction)
     {
-        rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
+        //rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
+        rb.velocity=direction.normalized*3f;
     }
 }
