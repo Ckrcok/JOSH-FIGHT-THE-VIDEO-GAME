@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
         Camera.main.transform.position = new Vector3(transform.position.x, transform.position.y,-10);
         anime.SetBool("Moving", moving);
         
-        print(attack);
+        //print(attack);
 
         if (Input.GetKey(KeyCode.LeftShift) && uiInfo.GetComponent<UIcontroller>().stamina > 0)
         {
@@ -123,7 +123,10 @@ public class PlayerController : MonoBehaviour
             moving = false;
         }
 
-
+        if (uiInfo.GetComponent<UIcontroller>().health <= 0)
+        {
+            gameObject.transform.position = new Vector3(-12, 0, 2);
+        }
 
 
     }
