@@ -123,7 +123,10 @@ public class PlayerController : MonoBehaviour
             moving = false;
         }
 
-
+        if (uiInfo.GetComponent<UIcontroller>().health <= 0)
+        {
+            gameObject.transform.position = new Vector3(-12, 0, 2);
+        }
 
 
     }
