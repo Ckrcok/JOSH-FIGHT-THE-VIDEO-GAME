@@ -52,6 +52,11 @@ public class PlayerController : MonoBehaviour
         //rb2d.velocity = vel*speed;
         Camera.main.transform.position = new Vector3(transform.position.x, transform.position.y,-10);
         anime.SetBool("Moving", moving);
+<<<<<<< HEAD
+=======
+        
+        //print(attack);
+>>>>>>> 3cc007ca3db4a9bdf7b14f8ffb8f0bedef972a10
 
 
         if (uiInfo.GetComponent<UIcontroller>().stamina > 0f && Input.GetKey(KeyCode.LeftShift))
@@ -131,7 +136,10 @@ public class PlayerController : MonoBehaviour
             moving = false;
         }
 
-
+        if (uiInfo.GetComponent<UIcontroller>().health <= 0)
+        {
+            gameObject.transform.position = new Vector3(-12, 0, 2);
+        }
 
 
     }
