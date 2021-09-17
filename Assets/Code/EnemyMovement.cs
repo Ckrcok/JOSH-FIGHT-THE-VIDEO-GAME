@@ -144,7 +144,7 @@ public class EnemyMovement : MonoBehaviour
 
     void EnemyAttack()
     {
-
+         
     }
 
     void moveCharacter(Vector2 direction)

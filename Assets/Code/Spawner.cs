@@ -18,7 +18,9 @@ public class Spawner : MonoBehaviour
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("enemy");
         if (enemies.Length == 0)
         {
-            Instantiate(enemyPrefab, transform);
+           // Instantiate(enemyPrefab, transform);
+            Instantiate(enemyPrefab, new Vector3(Random.Range(-5,5),-8), transform.rotation, transform);
+
         }
     }
 }

@@ -11,6 +11,7 @@ public class UIcontroller : MonoBehaviour
     public float stamina;
     public int lives;
     public int timer;
+    public int killCount;
 
     // Start is called before the first frame update
     void Start()
