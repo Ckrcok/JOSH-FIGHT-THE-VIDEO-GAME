@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
     int timer;
 
 
-    float speed = 2.0f;
+    float speed = 4.0f;
 
     bool moving;
 
@@ -52,17 +52,17 @@ public class PlayerController : MonoBehaviour
         //rb2d.velocity = vel*speed;
         Camera.main.transform.position = new Vector3(transform.position.x, transform.position.y,-10);
         anime.SetBool("Moving", moving);
-<<<<<<< HEAD
-=======
+//<<<<<<< HEAD
+//=======
         
-        //print(attack);
->>>>>>> 3cc007ca3db4a9bdf7b14f8ffb8f0bedef972a10
+//        //print(attack);
+//>>>>>>> 3cc007ca3db4a9bdf7b14f8ffb8f0bedef972a10
 
 
         if (uiInfo.GetComponent<UIcontroller>().stamina > 0f && Input.GetKey(KeyCode.LeftShift))
         {
-            print(uiInfo.GetComponent<UIcontroller>().stamina);
-            speed = 4.0f;
+            //print(uiInfo.GetComponent<UIcontroller>().stamina);
+            speed = 6.0f;
             uiInfo.GetComponent<UIcontroller>().stamina -= 0.25f;
             anime.speed = 1.5f;
 
@@ -71,7 +71,7 @@ public class PlayerController : MonoBehaviour
 
         else if (uiInfo.GetComponent<UIcontroller>().stamina <= 100)
         {
-            speed = 2.0f;
+            speed = 4.0f;
             uiInfo.GetComponent<UIcontroller>().stamina += 0.1f;
             anime.speed = 1f;
         }
@@ -79,7 +79,7 @@ public class PlayerController : MonoBehaviour
         
         else
         {
-            speed = 2.0f;
+            speed = 4.0f;
             anime.speed = 1f;
         }
 
