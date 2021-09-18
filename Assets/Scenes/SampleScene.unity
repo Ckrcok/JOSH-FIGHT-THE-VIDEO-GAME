@@ -289,6 +289,7 @@ MonoBehaviour:
   stamina: 0
   lives: 0
   timer: 0
+  killCount: 0
 --- !u!114 &203993716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -495,7 +496,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8108133440508842911, guid: 2ea701fe38ca8194da4043fc6326a7cf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.12
       objectReference: {fileID: 0}
     - target: {fileID: 8108133440508842911, guid: 2ea701fe38ca8194da4043fc6326a7cf, type: 3}
       propertyPath: m_LocalRotation.w
@@ -565,7 +566,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8108133440508842911, guid: 2ea701fe38ca8194da4043fc6326a7cf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 8108133440508842911, guid: 2ea701fe38ca8194da4043fc6326a7cf, type: 3}
       propertyPath: m_LocalRotation.w
@@ -920,7 +921,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8108133440508842911, guid: 2ea701fe38ca8194da4043fc6326a7cf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 8108133440508842911, guid: 2ea701fe38ca8194da4043fc6326a7cf, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2219,7 +2220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8108133440508842911, guid: 2ea701fe38ca8194da4043fc6326a7cf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: 8108133440508842911, guid: 2ea701fe38ca8194da4043fc6326a7cf, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2370,6 +2371,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1265581288}
     m_Modifications:
+    - target: {fileID: 4056613308958992691, guid: 4b8cf889bf07e0241bf168460f73195d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.27
+      objectReference: {fileID: 0}
     - target: {fileID: 5246161575652753388, guid: 4b8cf889bf07e0241bf168460f73195d, type: 3}
       propertyPath: m_Name
       value: Spiketrapsolid
