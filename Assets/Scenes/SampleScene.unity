@@ -151,11 +151,11 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 7c9b604948c5ed541937ee34e50e2cb3, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
-  Mute: 1
+  Loop: 0
+  Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
@@ -289,6 +289,7 @@ MonoBehaviour:
   stamina: 0
   lives: 0
   timer: 0
+  killCount: 0
 --- !u!114 &203993716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1148,7 +1149,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 825192409}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.2, y: 0, z: 0}
+  m_LocalPosition: {x: 0.2, y: -0.3, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0}
   m_Children: []
   m_Father: {fileID: 2534529223727327114}
@@ -1730,11 +1731,11 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f0bc024295975784bbe1d8cb8547ddde, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.5
   m_Pitch: 1
-  Loop: 1
-  Mute: 1
+  Loop: 0
+  Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
@@ -2186,6 +2187,80 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2050277591
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2050277592}
+  - component: {fileID: 2050277593}
+  m_Layer: 0
+  m_Name: AudioController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2050277592
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050277591}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.737661, y: -0.75091445, z: 2.8104672}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2050277593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050277591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a6c998eed03d2e45853fbb6e23eac91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: playerSwing
+    clip: {fileID: 8300000, guid: d76530269fad3574ba4094d2893b63f0, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: playerWalk
+    clip: {fileID: 8300000, guid: fc3980f7248052844b0c6d97474e1cd5, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: enemyWalk
+    clip: {fileID: 8300000, guid: fc3980f7248052844b0c6d97474e1cd5, type: 3}
+    volume: 1
+    pitch: 0.8
+    loop: 1
+    source: {fileID: 0}
+  - name: enemySwing
+    clip: {fileID: 8300000, guid: 73911460c4e1de94abad1e6395c2fc08, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: attackHit
+    clip: {fileID: 8300000, guid: eaaf4eacf5fdc3d418bffa703b8846d7, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!1001 &2116400849
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2297,7 +2372,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 6996131463178774053, guid: 7a7f3a9868a0a6a46a8ef3fe569afd0d, type: 3}
+  m_Sprite: {fileID: -1544278868802761812, guid: db07b297beaeed240a1963e81388d1bd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2432,8 +2507,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5bce32f899be474b8dda254fc60652f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  footSteps: {fileID: 8300000, guid: fc3980f7248052844b0c6d97474e1cd5, type: 3}
+  swing: {fileID: 8300000, guid: 73911460c4e1de94abad1e6395c2fc08, type: 3}
   attackArea: {fileID: 825192410}
-  attackRange: 0.5
+  attackRange: 1
   enemyLayers:
     serializedVersion: 2
     m_Bits: 8
@@ -2452,18 +2529,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.011235982, y: -0.14499351}
+  m_Offset: {x: 0.05214286, y: -0.37738147}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.3, y: 0.45}
+    pivot: {x: 0.32229048, y: 1}
+    oldSize: {x: 0.34, y: 0.46}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.179079, y: 0.16213351}
+  m_Size: {x: 0.16097116, y: 0.14402527}
   m_EdgeRadius: 0
 --- !u!50 &6840857844763868128
 Rigidbody2D:
