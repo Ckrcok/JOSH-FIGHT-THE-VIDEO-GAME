@@ -20,11 +20,13 @@ public class PlayerController : MonoBehaviour
     public bool damage;
     public bool attack;
 
+
     GameObject uiInfo;
 
     int timer;
 
-    float speed = 2.0f;
+
+    float speed = 4.0f;
 
     bool moving;
 
@@ -33,6 +35,7 @@ public class PlayerController : MonoBehaviour
     {
         damage = false;
         moving = false;
+
         rb2d = gameObject.GetComponent<Rigidbody2D>();
         anime = gameObject.GetComponent<Animator>();
         uiInfo = GameObject.Find("Canvas");
@@ -49,24 +52,34 @@ public class PlayerController : MonoBehaviour
         //rb2d.velocity = vel*speed;
         Camera.main.transform.position = new Vector3(transform.position.x, transform.position.y,-10);
         anime.SetBool("Moving", moving);
+//<<<<<<< HEAD
+//=======
         
-        //print(attack);
+//        //print(attack);
+//>>>>>>> 3cc007ca3db4a9bdf7b14f8ffb8f0bedef972a10
 
-        if (Input.GetKey(KeyCode.LeftShift) && uiInfo.GetComponent<UIcontroller>().stamina > 0)
+
+        if (uiInfo.GetComponent<UIcontroller>().stamina > 0f && Input.GetKey(KeyCode.LeftShift))
         {
-            speed = 4.0f;
-            uiInfo.GetComponent<UIcontroller>().stamina -= 0.03f;
+            //print(uiInfo.GetComponent<UIcontroller>().stamina);
+            speed = 6.0f;
+            uiInfo.GetComponent<UIcontroller>().stamina -= 0.25f;
             anime.speed = 1.5f;
+
         }
+
+
         else if (uiInfo.GetComponent<UIcontroller>().stamina <= 100)
         {
-            speed = 2.0f;
-            uiInfo.GetComponent<UIcontroller>().stamina += 0.2f;
+            speed = 4.0f;
+            uiInfo.GetComponent<UIcontroller>().stamina += 0.1f;
             anime.speed = 1f;
         }
+
+        
         else
         {
-            speed = 2.0f;
+            speed = 4.0f;
             anime.speed = 1f;
         }
 
