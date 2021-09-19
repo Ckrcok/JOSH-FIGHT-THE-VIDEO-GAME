@@ -154,6 +154,7 @@ public class EnemyMovement : MonoBehaviour
                 beenHit = false;
                 damaged = false;
                 timer = 0;
+
             }
         }
         foreach (Collider2D player in playerInRange)
@@ -179,7 +180,8 @@ public class EnemyMovement : MonoBehaviour
                 uiInfo.GetComponent<UIcontroller>().health -= 10;
                 FindObjectOfType<AudioController>().Play("enemySwing");
                 hit = false;
-            }
+                    FindObjectOfType<AudioController>().Play("attackHit");
+                }
             else if (player.name != "playerChar")
             {
                 print("miss");
@@ -190,8 +192,11 @@ public class EnemyMovement : MonoBehaviour
                 else if (player.name == "playerChar" && player.GetComponent<PlayerController>().blocking)
                 {
                     print("blocked");
+
+                    canAttack = true;
                     FindObjectOfType<AudioController>().Play("enemySwing");
                     uiInfo.GetComponent<UIcontroller>().stamina -= 30;
+                    FindObjectOfType<AudioController>().Play("attackBlock");
                     hit = false;
 
                 }

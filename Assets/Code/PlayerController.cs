@@ -9,7 +9,6 @@ public class PlayerController : MonoBehaviour
 
     Animator anime;
 
-    GameObject audioController;
 
     public AudioClip footSteps, swing;
     //attack variables
@@ -18,7 +17,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask enemyLayers;
 
 
-    float horizontal, vertical, moveX,moveY;
+    float moveX,moveY;
 
     public bool damage;
     public bool attack;
@@ -48,7 +47,6 @@ public class PlayerController : MonoBehaviour
         rb2d = gameObject.GetComponent<Rigidbody2D>();
         anime = gameObject.GetComponent<Animator>();
         uiInfo = GameObject.Find("Canvas");
-        audioController = FindObjectOfType<AudioController>().gameObject;
         //attackArea = GetComponentInChildren<Transform>();
     }
 
@@ -109,24 +107,27 @@ public class PlayerController : MonoBehaviour
             uiInfo.GetComponent<UIcontroller>().stamina -= 20;
             rb2d.velocity=(new Vector2(rb2d.velocity.x * 6, rb2d.velocity.y * 6));
             damage = true;
+            FindObjectOfType<AudioController>().Play("playerDodge");
         }
 
         if (Input.GetMouseButtonDown(1) && uiInfo.GetComponent<UIcontroller>().stamina >=30)
         {
             anime.SetTrigger("Block");
             blocking = true;
+            anime.SetBool("Blocking", blocking);
+
         }
         if (Input.GetMouseButton(1) && uiInfo.GetComponent<UIcontroller>().stamina >= 30)
         {
-            anime.SetBool("Blocking", true);
+            //anime.SetBool("Blocking", true);
             rb2d.velocity = new Vector2(0, 0);
         }
         else
         {
-            anime.SetBool("Blocking", false);
             blocking = false;
-        }
+            anime.SetBool("Blocking", blocking);
 
+        }
 
         if (Input.GetKey(KeyCode.D))
         {
@@ -228,6 +229,7 @@ public class PlayerController : MonoBehaviour
             //print(transform.rotation.eulerAngles);
             enemy.GetComponent<EnemyMovement>().damaged = true;
             enemy.GetComponent<EnemyMovement>().health -= 10;
+            FindObjectOfType<AudioController>().Play("attackHit");
             if (transform.rotation.eulerAngles.y == 180)
             {
                // print("rotated");

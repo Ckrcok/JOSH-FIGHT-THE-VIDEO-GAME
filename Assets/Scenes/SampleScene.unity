@@ -2261,6 +2261,18 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: playerDodge
+    clip: {fileID: 8300000, guid: 43827dd4840dfca4383dd969c4a959a0, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: attackBlock
+    clip: {fileID: 8300000, guid: 69f08851be885e744b7b4aa6c1fb8519, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!1001 &2116400849
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2383,6 +2395,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1820290386647671010
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1820290386060166305, guid: e3a73aa2e11a43247abae4786bfcf19a, type: 3}
+      propertyPath: m_Name
+      value: HealthPickup
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820290386060166311, guid: e3a73aa2e11a43247abae4786bfcf19a, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820290386060166311, guid: e3a73aa2e11a43247abae4786bfcf19a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.847649
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820290386060166311, guid: e3a73aa2e11a43247abae4786bfcf19a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.9069481
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820290386060166311, guid: e3a73aa2e11a43247abae4786bfcf19a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820290386060166311, guid: e3a73aa2e11a43247abae4786bfcf19a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820290386060166311, guid: e3a73aa2e11a43247abae4786bfcf19a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820290386060166311, guid: e3a73aa2e11a43247abae4786bfcf19a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820290386060166311, guid: e3a73aa2e11a43247abae4786bfcf19a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820290386060166311, guid: e3a73aa2e11a43247abae4786bfcf19a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820290386060166311, guid: e3a73aa2e11a43247abae4786bfcf19a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820290386060166311, guid: e3a73aa2e11a43247abae4786bfcf19a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e3a73aa2e11a43247abae4786bfcf19a, type: 3}
 --- !u!4 &2534529223727327114
 Transform:
   m_ObjectHideFlags: 0
@@ -2516,6 +2585,8 @@ MonoBehaviour:
     m_Bits: 8
   damage: 0
   attack: 0
+  dodging: 0
+  blocking: 0
 --- !u!61 &6840857844763868127
 BoxCollider2D:
   m_ObjectHideFlags: 0
