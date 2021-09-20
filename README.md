@@ -34,7 +34,7 @@ The team Josh consists of <a href="https://www.linkedin.com/in/dorz/">Dor Zairi<
 | <a href="https://www.linkedin.com/in/joshua-ross-a168a41b3/">Joshua Ross</a> & <a href="">Matthew Talyor</a>  | Programming      |
 
 
-# Tech That Was used In The Project
+# Tech That Was Used In The Project 👩‍💻
 
 
 <a align="center" href="https://en.wikipedia.org/wiki/Unity_(game_engine)"><img src="https://github.com/devicons/devicon/blob/master/icons/unity/unity-original.svg" alt="Unity" width="50" height="50"/></a> - Unity
@@ -52,7 +52,7 @@ The team Josh consists of <a href="https://www.linkedin.com/in/dorz/">Dor Zairi<
 <a href="https://medibangpaint.fandom.com/wiki/MediBang_Paint_Wikia"><img src="https://medibangpaint.com/favicon.ico" alt="MediBang" width="20" height="20"/></a> - MediBang
 
 
-# Show Case
+# Show Case 
 
 ### Attack
 
