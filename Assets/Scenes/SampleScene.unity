@@ -155,7 +155,7 @@ AudioSource:
   m_Volume: 0.319
   m_Pitch: 1
   Loop: 1
-  Mute: 0
+  Mute: 1
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
@@ -516,7 +516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5fc8bf104457804fb4749a4b4362b6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 4278082016809270489, guid: 8c4e0448b91a8c84b93e96d169086e55, type: 3}
+  enemyPrefab: {fileID: 4278082016809270489, guid: 23e215835747399488cbefcdf06b017f, type: 3}
 --- !u!1001 &638495727
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -717,7 +717,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &918313485
 GameObject:
@@ -1094,7 +1094,7 @@ AudioSource:
   m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
-  Mute: 0
+  Mute: 1
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
@@ -1553,7 +1553,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8437983860382098662, guid: 10fb3d09270ceac498c0fd32a73e204a, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8437983860382098662, guid: 10fb3d09270ceac498c0fd32a73e204a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1618,7 +1618,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8933588041951811104, guid: 2f06fd86d3e762b4ba39880f43820508, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8933588041951811104, guid: 2f06fd86d3e762b4ba39880f43820508, type: 3}
       propertyPath: m_AnchorMax.x
