@@ -5,6 +5,21 @@ public class GameManager : MonoBehaviour
 {
     bool gameHasEnded = false;
     
+    public void WinGame()
+    {
+        if(gameHasEnded == false)
+        {
+            gameHasEnded = true;
+            Debug.Log("Game Win");
+            Win();
+        }
+    }
+
+    void Win()
+    {
+        SceneManager.LoadScene(2);
+    }
+    
     public void EndGame ()
     {
         if(gameHasEnded == false)
