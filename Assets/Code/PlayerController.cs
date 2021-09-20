@@ -9,13 +9,15 @@ public class PlayerController : MonoBehaviour
 
     Animator anime;
 
+
+    public AudioClip footSteps, swing;
     //attack variables
     public Transform attackArea;
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
 
 
-    float horizontal, vertical, moveX,moveY;
+    float moveX,moveY;
 
     public bool damage;
     public bool attack;
@@ -26,9 +28,15 @@ public class PlayerController : MonoBehaviour
     int timer;
 
 
+
     float speed = 4.0f;
 
     bool moving;
+
+    public bool dodging;
+
+    public bool blocking;
+
 
     // Start is called before the first frame update
     void Start()
@@ -72,7 +80,7 @@ public class PlayerController : MonoBehaviour
         else if (uiInfo.GetComponent<UIcontroller>().stamina <= 100)
         {
             speed = 4.0f;
-            uiInfo.GetComponent<UIcontroller>().stamina += 0.1f;
+            uiInfo.GetComponent<UIcontroller>().stamina += 0.025f;
             anime.speed = 1f;
         }
 
@@ -83,26 +91,49 @@ public class PlayerController : MonoBehaviour
             anime.speed = 1f;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetMouseButtonDown(0)&&uiInfo.GetComponent<UIcontroller>().stamina >=10)
         {
-
+            FindObjectOfType<AudioController>().Play("playerSwing");
+            uiInfo.GetComponent<UIcontroller>().stamina -= 10;
             SlashAttack();
+            
         }
 
-        //if (Input.GetKey(KeyCode.Space))
-        //{
-
-        //    rb2d.AddForce(new Vector2(rb2d.velocity.x * 4, rb2d.velocity.y * 4));
-        //    damage = true;
-        //}
 
 
+        if (Input.GetKeyDown(KeyCode.Space)&& uiInfo.GetComponent<UIcontroller>().stamina >=20)
+        {
+            anime.SetTrigger("Dodge");
+            uiInfo.GetComponent<UIcontroller>().stamina -= 20;
+            rb2d.velocity=(new Vector2(rb2d.velocity.x * 6, rb2d.velocity.y * 6));
+            damage = true;
+            FindObjectOfType<AudioController>().Play("playerDodge");
+        }
+
+        if (Input.GetMouseButtonDown(1) && uiInfo.GetComponent<UIcontroller>().stamina >=30)
+        {
+            anime.SetTrigger("Block");
+            blocking = true;
+            anime.SetBool("Blocking", blocking);
+
+        }
+        if (Input.GetMouseButton(1) && uiInfo.GetComponent<UIcontroller>().stamina >= 30)
+        {
+            //anime.SetBool("Blocking", true);
+            rb2d.velocity = new Vector2(0, 0);
+        }
+        else
+        {
+            blocking = false;
+            anime.SetBool("Blocking", blocking);
+
+        }
 
         if (Input.GetKey(KeyCode.D))
         {
             moveX = 1;
             transform.eulerAngles = new Vector2(0, 0);
-
+            
 
         }
         else if (Input.GetKey(KeyCode.A))
@@ -130,11 +161,23 @@ public class PlayerController : MonoBehaviour
         if(rb2d.velocity.x >0 || rb2d.velocity.x < 0 || rb2d.velocity.y > 0 || rb2d.velocity.y < 0 )
         {
             moving = true;
+
+
         }
         else if(rb2d.velocity.x == 0 || rb2d.velocity.y == 0)
         {
             moving = false;
         }
+        if (moving)
+        {
+            if (FindObjectOfType<AudioController>().gameObject.GetComponent<AudioSource>().clip.name != "playerWalk")
+            {
+               
+                FindObjectOfType<AudioController>().StopPlaying("playerWalk");
+            }
+        }
+        else
+             FindObjectOfType<AudioController>().Play("playerWalk");
 
         if (uiInfo.GetComponent<UIcontroller>().health <= 0)
         {
@@ -147,16 +190,18 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         Vector2 velVec = new Vector2(moveX, moveY).normalized;
-        if (!damage)
+        if (!damage && !dodging && !blocking)
         {
             rb2d.velocity = velVec * speed;
         }
-        else if (damage)
+        else if (damage || dodging)
         {
             timer++;
-            if (timer is 15)
+            if (timer is 7)
             {
+                dodging = false;
                 damage = false;
+                rb2d.velocity = new Vector2(0, 0);
                 timer = 0;
             }
         }
@@ -175,22 +220,24 @@ public class PlayerController : MonoBehaviour
     {
         anime.SetTrigger("Attack");
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackArea.position, attackRange, enemyLayers);
-
+        
 
         foreach(Collider2D enemy in hitEnemies)
         {
-            print("hit" + enemy.name);
-            print(transform.rotation.eulerAngles);
+            print("hit: " + enemy.name);
+            enemy.GetComponent<EnemyMovement>().beenHit = true;
+            //print(transform.rotation.eulerAngles);
             enemy.GetComponent<EnemyMovement>().damaged = true;
             enemy.GetComponent<EnemyMovement>().health -= 10;
+            FindObjectOfType<AudioController>().Play("attackHit");
             if (transform.rotation.eulerAngles.y == 180)
             {
-                print("rotated");
+               // print("rotated");
                 enemy.gameObject.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(-300,0));
             }
             else if (transform.rotation.eulerAngles.y == 0)
             {
-                print("rotated");
+               // print("rotated");
                 enemy.gameObject.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(300, 0));
             }
 

@@ -5,7 +5,124 @@ guid: 9393ddbb38780144aa223dba25653d78
 guid: b0306e40740dbb143ab0afd59b4417d8
 >>>>>>> main
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 5653731953821083842
+    second: Enemy-sword-Josh_0
+  - first:
+      213: 5086872598873497101
+    second: Enemy-sword-Josh_1
+  - first:
+      213: 3752532432887098960
+    second: Enemy-sword-Josh_2
+  - first:
+      213: 1472360173090207624
+    second: Enemy-sword-Josh_3
+  - first:
+      213: 5150425177703595348
+    second: Enemy-sword-Josh_4
+  - first:
+      213: 3373408723242378643
+    second: Enemy-sword-Josh_5
+  - first:
+      213: 7218687599897003789
+    second: Enemy-sword-Josh_6
+  - first:
+      213: -4084660600682522902
+    second: Enemy-sword-Josh_7
+  - first:
+      213: 7349585306456925742
+    second: Enemy-sword-Josh_8
+  - first:
+      213: -369964322151332170
+    second: Enemy-sword-Josh_9
+  - first:
+      213: -805049159740114890
+    second: Enemy-sword-Josh_10
+  - first:
+      213: -3217053964503908126
+    second: Enemy-sword-Josh_11
+  - first:
+      213: -1687804688982033010
+    second: Enemy-sword-Josh_12
+  - first:
+      213: -2141899512319679683
+    second: Enemy-sword-Josh_13
+  - first:
+      213: 8647476436126914507
+    second: Enemy-sword-Josh_14
+  - first:
+      213: 3308912611842852427
+    second: Enemy-sword-Josh_15
+  - first:
+      213: 4956057917317732345
+    second: Enemy-sword-Josh_16
+  - first:
+      213: -3037942000084173437
+    second: Enemy-sword-Josh_17
+  - first:
+      213: -7851171520129819313
+    second: Enemy-sword-Josh_18
+  - first:
+      213: -1085946277275801311
+    second: Enemy-sword-Josh_19
+  - first:
+      213: -2619942216423223520
+    second: Enemy-sword-Josh_20
+  - first:
+      213: -5898690774357241285
+    second: Enemy-sword-Josh_21
+  - first:
+      213: 5792686811684123261
+    second: Enemy-sword-Josh_22
+  - first:
+      213: -304666585047096607
+    second: Enemy-sword-Josh_23
+  - first:
+      213: -4582686356371093551
+    second: Enemy-sword-Josh_24
+  - first:
+      213: -498938433574742222
+    second: Enemy-sword-Josh_25
+  - first:
+      213: -6008793182304235210
+    second: Enemy-sword-Josh_26
+  - first:
+      213: -1161044463076956366
+    second: Enemy-sword-Josh_27
+  - first:
+      213: 5278271695891791529
+    second: Enemy-sword-Josh_28
+  - first:
+      213: -1054056823292583930
+    second: Enemy-sword-Josh_29
+  - first:
+      213: -6800282443094453439
+    second: Enemy-sword-Josh_30
+  - first:
+      213: -2654976304467315073
+    second: Enemy-sword-Josh_31
+  - first:
+      213: 5195148328106773188
+    second: Enemy-sword-Josh_32
+  - first:
+      213: -3563938119756337929
+    second: Enemy-sword-Josh_33
+  - first:
+      213: 4490501452948105342
+    second: Enemy-sword-Josh_34
+  - first:
+      213: 1154129789810461862
+    second: Enemy-sword-Josh_35
+  - first:
+      213: -8518688054253918517
+    second: Enemy-sword-Josh_36
+  - first:
+      213: 3259912096985230448
+    second: Enemy-sword-Josh_37
+  - first:
+      213: -2225429574396773162
+    second: Enemy-sword-Josh_38
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -45,7 +162,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -72,7 +189,55 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -81,7 +246,742 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Enemy-sword-Josh_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 325
+        width: 34
+        height: 46
+      alignment: 9
+      pivot: {x: 0.32260615, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c8e7cad147167e40800000000000000
+      internalID: 5653731953821083842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-sword-Josh_1
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 325
+        width: 34
+        height: 46
+      alignment: 9
+      pivot: {x: 0.3238135, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0ed5816da3389640800000000000000
+      internalID: 5086872598873497101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-sword-Josh_2
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 325
+        width: 34
+        height: 44
+      alignment: 9
+      pivot: {x: 0.324002, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05e2e5ead5ca31430800000000000000
+      internalID: 3752532432887098960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-sword-Josh_3
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 325
+        width: 34
+        height: 44
+      alignment: 9
+      pivot: {x: 0.3248143, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 887797ac6cfde6410800000000000000
+      internalID: 1472360173090207624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-sword-Josh_4
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 325
+        width: 34
+        height: 46
+      alignment: 9
+      pivot: {x: 0.32235268, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45d3047396cf97740800000000000000
+      internalID: 5150425177703595348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-sword-Josh_5
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 265
+        width: 35
+        height: 44
+      alignment: 9
+      pivot: {x: 0.40055743, y: 1.000127}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 395e0175c51c0de20800000000000000
+      internalID: 3373408723242378643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-sword-Josh_7
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 262
+        width: 46
+        height: 46
+      alignment: 9
+      pivot: {x: 0.47785237, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae6d84c33de5057c0800000000000000
+      internalID: -4084660600682522902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-sword-Josh_9
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 261
+        width: 34
+        height: 46
+      alignment: 9
+      pivot: {x: 0.38342285, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b60a9eb86f9ddaf0800000000000000
+      internalID: -369964322151332170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-sword-Josh_10
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 261
+        width: 34
+        height: 47
+      alignment: 9
+      pivot: {x: 0.32352942, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 638b6f6fd04e3d4f0800000000000000
+      internalID: -805049159740114890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-sword-Josh_11
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 264
+        width: 37
+        height: 46
+      alignment: 9
+      pivot: {x: 0.21694699, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e08b76c67aba53d0800000000000000
+      internalID: -3217053964503908126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-sword-Josh_12
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 263
+        width: 42
+        height: 46
+      alignment: 9
+      pivot: {x: 0.19071524, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8dbcf6e396b398e0800000000000000
+      internalID: -1687804688982033010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-sword-Josh_13
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 260
+        width: 39
+        height: 47
+      alignment: 9
+      pivot: {x: 0.20539582, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d336a97edb17642e0800000000000000
+      internalID: -2141899512319679683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-sword-Josh_14
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 260
+        width: 35
+        height: 48
+      alignment: 9
+      pivot: {x: 0.22901611, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc7d7ea9002020870800000000000000
+      internalID: 8647476436126914507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-sword-Josh_15
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 197
+        width: 34
+        height: 44
+      alignment: 9
+      pivot: {x: 0.47236562, y: 1.0010167}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4604b53d7e9bed20800000000000000
+      internalID: 3308912611842852427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-sword-Josh_17
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 197
+        width: 39
+        height: 44
+      alignment: 9
+      pivot: {x: 0.43572214, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38d3ebcb8df07d5d0800000000000000
+      internalID: -3037942000084173437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-sword-Josh_19
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 197
+        width: 45
+        height: 44
+      alignment: 9
+      pivot: {x: 0.18089329, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12961d94d91fde0f0800000000000000
+      internalID: -1085946277275801311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-sword-Josh_20
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 197
+        width: 42
+        height: 44
+      alignment: 9
+      pivot: {x: 0.18940662, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02f4b0a6f6814abd0800000000000000
+      internalID: -2619942216423223520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-sword-Josh_21
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 133
+        width: 34
+        height: 44
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b32109a4ef3a32ea0800000000000000
+      internalID: -5898690774357241285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-sword-Josh_22
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 142
+        width: 10
+        height: 31
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d72b589d6f1c36050800000000000000
+      internalID: 5792686811684123261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-sword-Josh_23
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 133
+        width: 25
+        height: 44
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e22657ea5b95cbf0800000000000000
+      internalID: -304666585047096607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-sword-Josh_24
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 147
+        width: 7
+        height: 7
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d7c87bf9070760c0800000000000000
+      internalID: -4582686356371093551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-sword-Josh_25
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 133
+        width: 45
+        height: 44
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 237dcfd532a6319f0800000000000000
+      internalID: -498938433574742222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-sword-Josh_26
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 133
+        width: 42
+        height: 44
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63197f7cf6a7c9ca0800000000000000
+      internalID: -6008793182304235210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-sword-Josh_27
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 133
+        width: 39
+        height: 44
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2372dd9563423efe0800000000000000
+      internalID: -1161044463076956366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-sword-Josh_28
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 133
+        width: 38
+        height: 44
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aef0a55420304940800000000000000
+      internalID: 5278271695891791529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-sword-Josh_29
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 135
+        width: 13
+        height: 19
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 600a19267ec3f51f0800000000000000
+      internalID: -1054056823292583930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-sword-Josh_30
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 133
+        width: 25
+        height: 44
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 143970fb52b80a1a0800000000000000
+      internalID: -6800282443094453439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-sword-Josh_31
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 149
+        width: 7
+        height: 7
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7675252e11a72bd0800000000000000
+      internalID: -2654976304467315073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-sword-Josh_32
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 70
+        width: 44
+        height: 45
+      alignment: 9
+      pivot: {x: 0.38735676, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cac44c11efd81840800000000000000
+      internalID: 5195148328106773188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-sword-Josh_33
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 70
+        width: 44
+        height: 45
+      alignment: 9
+      pivot: {x: 0.38590205, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fc2372a9295a8ec0800000000000000
+      internalID: -3563938119756337929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-sword-Josh_34
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 70
+        width: 44
+        height: 45
+      alignment: 9
+      pivot: {x: 0.386992, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e78e85e9747715e30800000000000000
+      internalID: 4490501452948105342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-sword-Josh_35
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 6
+        width: 42
+        height: 45
+      alignment: 9
+      pivot: {x: 0.191, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ac4952ddea440010800000000000000
+      internalID: 1154129789810461862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-sword-Josh_36
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 8
+        width: 39
+        height: 44
+      alignment: 9
+      pivot: {x: 0.191, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc6e4dd395a87c980800000000000000
+      internalID: -8518688054253918517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-sword-Josh_37
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 9
+        width: 47
+        height: 34
+      alignment: 9
+      pivot: {x: 0.191, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07cadcbc7c88d3d20800000000000000
+      internalID: 3259912096985230448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-sword-Josh_38
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 5
+        width: 51
+        height: 17
+      alignment: 9
+      pivot: {x: 0.191, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dc7e69c79fad11e0800000000000000
+      internalID: -2225429574396773162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
