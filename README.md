@@ -1,7 +1,7 @@
 
 
 <p align="center">
-<a href="https://github.com/Ckrcok/JOSH-FIGHT-THE-VIDEO-GAME"
+<a href="https://github.com/Ckrcok/JOSH-FIGHT-THE-VIDEO-GAME">
   <img src="https://raw.githubusercontent.com/Ckrcok/JOSH-FIGHT-THE-VIDEO-GAME/readme/Assets/Sprites/Josh%20Fight%20One%20Up%20v1.png" width="150" title="hover text">
   </a>
 </p>
