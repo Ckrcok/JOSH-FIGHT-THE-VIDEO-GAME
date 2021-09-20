@@ -49,13 +49,13 @@ The team Josh consists of <a href="https://www.linkedin.com/in/dorz/">Dor Zairi<
 <a href="https://en.wikipedia.org/wiki/Unity_(game_engine)"><img src="https://github.com/devicons/devicon/blob/master/icons/unity/unity-original.svg" alt="Unity" width="50" height="50"/></a>
 
 
-<a href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)"><img src="https://github.com/devicons/devicon/blob/master/icons/bash/bash-original.svg" alt="Bash" width="50" height="50"/></a>
+<a href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)"><img src="https://github.com/devicons/devicon/blob/master/icons/bash/bash-original.svg" alt="Bash" width="50" height="50"/></a> - Unity
 
-<a href="https://en.wikipedia.org/wiki/Git"><img src="https://github.com/devicons/devicon/blob/master/icons/git/git-original-wordmark.svg" alt="Git" width="50" height="50"/></a>
+<a href="https://en.wikipedia.org/wiki/Git"><img src="https://github.com/devicons/devicon/blob/master/icons/git/git-original-wordmark.svg" alt="Git" width="50" height="50"/></a> - Git
 
-<a href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)"><img src="https://github.com/devicons/devicon/blob/master/icons/csharp/csharp-line.svg" alt="Unity" width="50" height="50"/></a>
+<a href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)"><img src="https://github.com/devicons/devicon/blob/master/icons/csharp/csharp-line.svg" alt="C#" width="50" height="50"/></a> - C#
 
 
-<a href="https://es.wikipedia.org/wiki/Aseprite"><img src="https://pbs.twimg.com/profile_images/875731732389146624/-UznwnAx_400x400.jpg" alt="Unity" width="50" height="50"/></a>
+<a href="https://es.wikipedia.org/wiki/Aseprite"><img src="https://pbs.twimg.com/profile_images/875731732389146624/-UznwnAx_400x400.jpg" alt="Aseprite" width="50" height="50"/></a> - Aseprite
 
-<a href="https://medibangpaint.fandom.com/wiki/MediBang_Paint_Wikia"><img src="https://medibangpaint.com/favicon.ico" alt="Unity" width="20" height="20"/></a>
+<a href="https://medibangpaint.fandom.com/wiki/MediBang_Paint_Wikia"><img src="https://medibangpaint.com/favicon.ico" alt="MediBang" width="20" height="20"/></a> - MediBang
