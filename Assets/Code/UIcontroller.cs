@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class UIcontroller : MonoBehaviour
 {
 
-    public Text healthUi, staminaUi, livesUi;
+    public Text healthUi, staminaUi, livesUi, killCountUi;
     public int health;
     public float stamina;
     public int lives;
@@ -19,6 +19,7 @@ public class UIcontroller : MonoBehaviour
         health = 100;
         stamina = 100;
         lives = 3;
+        killCount = 0;
         //   healthUi.text = "";
 
     }
@@ -29,6 +30,13 @@ public class UIcontroller : MonoBehaviour
         healthUi.text = "Health: " + health + "/100";
         staminaUi.text = "Stamina: " + Mathf.Round(stamina) + "/100";
         livesUi.text = "Lives: " + lives;
+        killCountUi.text = "Kills " + killCount;
+        
+        if(killCount >= 5)
+        {
+            FindObjectOfType<GameManager>().WinGame();
+        }
+
         if (health <= 0)
         {
             if(lives == 0)

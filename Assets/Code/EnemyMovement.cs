@@ -86,6 +86,9 @@ public class EnemyMovement : MonoBehaviour
 
         if (health <= 0)
         {
+            Destroy(gameObject);
+            uiInfo.GetComponent<UIcontroller>().killCount++;
+            Debug.Log(uiInfo.GetComponent<UIcontroller>().killCount);
             anime.SetTrigger("Death");
             FindObjectOfType<AudioController>().StopPlaying("enemySwing");
             FindObjectOfType<AudioController>().StopPlaying("enemyWalk");
