@@ -56,12 +56,12 @@ The team Josh consists of <a href="https://www.linkedin.com/in/dorz/">Dor Zairi<
 
 ### Attack
 
-![Josh Attacking](https://github.com/Ckrcok/JOSH-FIGHT-THE-VIDEO-GAME/blob/readme/ShowCase/Attacking.gif)
+![Josh Attacking](https://github.com/Ckrcok/JOSH-FIGHT-THE-VIDEO-GAME/blob/main/ShowCase/Attacking.gif)
 
 ### Block
 
-![Josh Blocking](https://github.com/Ckrcok/JOSH-FIGHT-THE-VIDEO-GAME/blob/readme/ShowCase/Blocking.gif)
+![Josh Blocking](https://github.com/Ckrcok/JOSH-FIGHT-THE-VIDEO-GAME/blob/main/ShowCase/Blocking.gif)
 
 ### Dodge
 
-![Josh Dodging](https://github.com/Ckrcok/JOSH-FIGHT-THE-VIDEO-GAME/blob/readme/ShowCase/Dodging.gif)
+![Josh Dodging](https://github.com/Ckrcok/JOSH-FIGHT-THE-VIDEO-GAME/blob/main/ShowCase/Dodging.gif)
