@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using UnityEngine.Audio;
 using UnityEngine;
 
@@ -21,14 +20,14 @@ public class AudioController : MonoBehaviour
         }
     }
 
-    public void StopPlaying (string sound)
+    public void StopPlaying (string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
-        if (s == null)
-        {
-            Debug.LogWarning("Sound: " + name + " not found!");
-            return;
-        }
+        //if (s == null)
+        //{
+        //    Debug.LogWarning("Sound: " + name + " not found!");
+        //    return;
+        //}
         s.source.Stop();
     }
 
@@ -38,7 +37,7 @@ public class AudioController : MonoBehaviour
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
         {
-            Debug.LogWarning("Sound: " + name + " not found!");
+            Debug.LogWarning("sound: " + name + " not found!");
             return;
         }
         s.source.Play();
