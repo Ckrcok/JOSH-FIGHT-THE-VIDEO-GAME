@@ -1,5 +1,10 @@
+
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Ckrcok/JOSH-FIGHT-THE-VIDEO-GAME/readme/Assets/Sprites/Josh%20Fight%20One%20Up%20v1.png" width="150" title="hover text">
+</p>
 <h1 align="center">Josh Fight - The Video Game</h1>
-<img href="https://github.com/Ckrcok/JOSH-FIGHT-THE-VIDEO-GAME/blob/readme/Assets/Sprites/Josh%20Fight%20One%20Up%20v1.png"/>
+
 
 ## About :information_source:
 Our Game is based on the meme event "<a href="https://en.wikipedia.org/wiki/Josh_fight">Josh Fight</a>", that occurred in April 2021. writing in C# and use the Unity Engine.
@@ -46,10 +51,10 @@ The team Josh consists of <a href="https://www.linkedin.com/in/dorz/">Dor Zairi<
 # Tech That Was used In The Project
 
 
-<a href="https://en.wikipedia.org/wiki/Unity_(game_engine)"><img src="https://github.com/devicons/devicon/blob/master/icons/unity/unity-original.svg" alt="Unity" width="50" height="50"/></a>
+<a align="center" href="https://en.wikipedia.org/wiki/Unity_(game_engine)"><img src="https://github.com/devicons/devicon/blob/master/icons/unity/unity-original.svg" alt="Unity" width="50" height="50"/></a> - Unity
 
 
-<a href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)"><img src="https://github.com/devicons/devicon/blob/master/icons/bash/bash-original.svg" alt="Bash" width="50" height="50"/></a> - Unity
+<a href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)"><img src="https://github.com/devicons/devicon/blob/master/icons/bash/bash-original.svg" alt="Bash" width="50" height="50"/></a> - Bash
 
 <a href="https://en.wikipedia.org/wiki/Git"><img src="https://github.com/devicons/devicon/blob/master/icons/git/git-original-wordmark.svg" alt="Git" width="50" height="50"/></a> - Git
 
