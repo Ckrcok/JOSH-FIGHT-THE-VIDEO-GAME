@@ -44,7 +44,7 @@ public class UIcontroller : MonoBehaviour
             {
                 timer = 0;
                 health = 100;
-                lives = lives - 1;
+                lives--;
             }
         }
     }
