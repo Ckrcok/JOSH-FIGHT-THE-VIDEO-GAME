@@ -25,14 +25,14 @@ Click On <code><a href="https://trello.com/b/Ngn0n74r/josh-fight-the-video-game"
 
 # Show Case
 
-## Attack
+### Attack
 
 ![Josh Attacking](https://github.com/Ckrcok/JOSH-FIGHT-THE-VIDEO-GAME/blob/readme/ShowCase/Attacking.gif)
 
-## Block
+### Block
 
 ![Josh Blocking](https://github.com/Ckrcok/JOSH-FIGHT-THE-VIDEO-GAME/blob/readme/ShowCase/Blocking.gif)
 
-## Dodge
+### Dodge
 
 ![Josh Dodging](https://github.com/Ckrcok/JOSH-FIGHT-THE-VIDEO-GAME/blob/readme/ShowCase/Dodging.gif)
