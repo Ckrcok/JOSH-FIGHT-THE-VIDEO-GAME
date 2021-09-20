@@ -21,4 +21,4 @@ The team Josh consists of <a href="https://www.linkedin.com/in/dorz/">Dor Zairi<
 | <a href="https://www.linkedin.com/in/joshua-ross-a168a41b3/">Joshua Ross</a> & <a href="">Matthew Talyor</a>  | Programming      |
 
 
-Click On <a href="https://trello.com/b/Ngn0n74r/josh-fight-the-video-game"><img src="https://github.com/devicons/devicon/blob/master/icons/trello/trello-plain-wordmark.svg" alt="trello board" width="110" height="150"/></a>To Go To Our Public Trello Board
+Click On <code><a href="https://trello.com/b/Ngn0n74r/josh-fight-the-video-game"><img src="https://github.com/devicons/devicon/blob/master/icons/trello/trello-plain-wordmark.svg" alt="trello board" width="60" height="60"/></a></code> To Go To Our Public Trello Board
