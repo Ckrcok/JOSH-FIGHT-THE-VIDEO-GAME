@@ -6,6 +6,10 @@ Our Game is based on the meme event "<a href="https://en.wikipedia.org/wiki/Josh
 
 The game was develop for game jam in the program of <a href="https://mediaarts.humber.ca/programs/game-programming.html">Game Programming</a> of Humber College
 
+
+
+To View Our Project Documentation Click on The Book <a href ="https://docs.google.com/document/d/1-xEH_DGoglEEbAaSQ8y95tqK2gbJKjUk6SJT4-Sk64w/edit?usp=sharing"> :open_book:</a>
+
 ## About the team :star2:
 
 The team Josh consists of <a href="https://www.linkedin.com/in/dorz/">Dor Zairi</a>, <a href="https://www.linkedin.com/in/moses-mckeon-90212a221/">Moses Mckeon</a>, <a href="">Thuan Ngoa</a>, <a href="">Derek Sparks</a>, <a href="">Ruslan Yeltsor</a>, <a href="https://www.linkedin.com/in/joshua-ross-a168a41b3/">Joshua Ross</a>, <a href="">Matthew Talyor</a>.
