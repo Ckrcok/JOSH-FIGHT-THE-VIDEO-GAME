@@ -22,3 +22,10 @@ The team Josh consists of <a href="https://www.linkedin.com/in/dorz/">Dor Zairi<
 
 
 Click On <code><a href="https://trello.com/b/Ngn0n74r/josh-fight-the-video-game"><img src="https://github.com/devicons/devicon/blob/master/icons/trello/trello-plain-wordmark.svg" alt="trello board" width="60" height="60"/></a></code> To Go To Our Public Trello Board
+
+
+![Josh Attacking](https://github.com/Ckrcok/JOSH-FIGHT-THE-VIDEO-GAME/blob/readme/ShowCase/Attacking.gif)
+
+![Josh Blocking](https://github.com/Ckrcok/JOSH-FIGHT-THE-VIDEO-GAME/blob/readme/ShowCase/Blocking.gif)
+
+![Josh Dodging](https://github.com/Ckrcok/JOSH-FIGHT-THE-VIDEO-GAME/blob/readme/ShowCase/Dodging.gif)
