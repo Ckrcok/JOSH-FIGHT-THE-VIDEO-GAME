@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     Animator anime;
 
 
-    //public AudioClip footSteps, swing;
+    public AudioClip footStepClip;
     //attack variables
     public Transform attackArea;
     public float attackRange = 0.5f;
@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
 
     int timer;
 
-
+    AudioSource footSteps;
 
     float speed = 4.0f;
 
@@ -37,10 +37,14 @@ public class PlayerController : MonoBehaviour
 
     public bool blocking;
 
+    bool stepSound;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        footSteps = FindObjectOfType<AudioController>().GetComponent<AudioSource>();
+
         damage = false;
         moving = false;
 
@@ -160,12 +164,26 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.W)||Input.GetKeyDown(KeyCode.S)||Input.GetKeyDown(KeyCode.A)||Input.GetKeyDown(KeyCode.D))
         {
+            //if (footsteps is still playing ){return}
+           
+            if (stepSound == true)
+            {
+                return;
+                //FindObjectOfType<AudioController>().GetComponent<AudioSource>().clip = otherClip;
+                //FindObjectOfType<AudioController>().GetComponent<AudioSource>().Play();
+            }
+            else
+            {
+                stepSound = true;
+                FindObjectOfType<AudioController>().Play("playerWalk");
+            }
             
-            FindObjectOfType<AudioController>().Play("playerWalk");
+
         }
         else if(!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D))
         {
             FindObjectOfType<AudioController>().StopPlaying("playerWalk");
+            stepSound = false;
         }
 
 
