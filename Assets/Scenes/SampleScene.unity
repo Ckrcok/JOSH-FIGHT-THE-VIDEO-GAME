@@ -1256,6 +1256,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1603721527 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6212092795151166646, guid: 10fb3d09270ceac498c0fd32a73e204a, type: 3}
+  m_PrefabInstance: {fileID: 6212092794896434028}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1897667656
 GameObject:
   m_ObjectHideFlags: 0
@@ -1647,6 +1652,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 637913062695303346, guid: 10fb3d09270ceac498c0fd32a73e204a, type: 3}
+      propertyPath: attackArea
+      value: 
+      objectReference: {fileID: 1603721527}
+    - target: {fileID: 637913062695303346, guid: 10fb3d09270ceac498c0fd32a73e204a, type: 3}
+      propertyPath: attackRange
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 637913062695303346, guid: 10fb3d09270ceac498c0fd32a73e204a, type: 3}
+      propertyPath: footStepClip
+      value: 
+      objectReference: {fileID: 8300000, guid: fc3980f7248052844b0c6d97474e1cd5, type: 3}
+    - target: {fileID: 637913062695303346, guid: 10fb3d09270ceac498c0fd32a73e204a, type: 3}
+      propertyPath: enemyLayers.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8437983860382098662, guid: 10fb3d09270ceac498c0fd32a73e204a, type: 3}
       propertyPath: m_RootOrder
       value: 2
