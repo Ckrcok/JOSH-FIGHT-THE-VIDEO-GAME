@@ -101,19 +101,21 @@ public class EnemyMovement : MonoBehaviour
             moving = true;
         }
         else
+        {
             moving = false;
+        }
 
         transform.GetChild(0).transform.localScale = new Vector2 (health / 150,0.05f);
         if (moving)
         {
-            if (FindObjectOfType<AudioController>().gameObject.GetComponent<AudioSource>().clip.name != "enemyWalk")
-            {
+           // if (FindObjectOfType<AudioController>().gameObject.GetComponent<AudioSource>().clip.name != "enemyWalk")
+           // {
 
-                FindObjectOfType<AudioController>().StopPlaying("enemyWalk");
-            }
+                FindObjectOfType<AudioController>().Play("enemyWalk");
+            //}
         }
         else
-            FindObjectOfType<AudioController>().Play("enemyWalk");
+            FindObjectOfType<AudioController>().StopPlaying("enemyWalk");
     }
 
     private void FixedUpdate()

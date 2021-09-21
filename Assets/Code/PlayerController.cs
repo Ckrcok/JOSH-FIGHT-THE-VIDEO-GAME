@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     Animator anime;
 
 
-    public AudioClip footSteps, swing;
+    //public AudioClip footSteps, swing;
     //attack variables
     public Transform attackArea;
     public float attackRange = 0.5f;
@@ -80,7 +80,7 @@ public class PlayerController : MonoBehaviour
         else if (uiInfo.GetComponent<UIcontroller>().stamina <= 100)
         {
             speed = 4.0f;
-            uiInfo.GetComponent<UIcontroller>().stamina += 0.025f;
+            uiInfo.GetComponent<UIcontroller>().stamina += 10.025f;
             anime.speed = 1f;
         }
 
@@ -158,26 +158,40 @@ public class PlayerController : MonoBehaviour
             moveY = 0;
         }
 
-        if(rb2d.velocity.x >0 || rb2d.velocity.x < 0 || rb2d.velocity.y > 0 || rb2d.velocity.y < 0 )
+        if (Input.GetKeyDown(KeyCode.W)||Input.GetKeyDown(KeyCode.S)||Input.GetKeyDown(KeyCode.A)||Input.GetKeyDown(KeyCode.D))
+        {
+            
+            FindObjectOfType<AudioController>().Play("playerWalk");
+        }
+        else if(!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D))
+        {
+            FindObjectOfType<AudioController>().StopPlaying("playerWalk");
+        }
+
+
+        if(rb2d.velocity.x > 0.1f || rb2d.velocity.x < -0.1f || rb2d.velocity.y > 0.1f || rb2d.velocity.y < -0.1f)
         {
             moving = true;
 
 
         }
-        else if(rb2d.velocity.x == 0 || rb2d.velocity.y == 0)
+        else if(rb2d.velocity.x == 0 && rb2d.velocity.y == 0)
         {
             moving = false;
         }
-        if (moving)
-        {
-            if (FindObjectOfType<AudioController>().gameObject.GetComponent<AudioSource>().clip.name != "playerWalk")
-            {
-               
-                FindObjectOfType<AudioController>().StopPlaying("playerWalk");
-            }
-        }
-        else
-             FindObjectOfType<AudioController>().Play("playerWalk");
+        //if (moving)
+        //{
+        //    if (FindObjectOfType<AudioController>().gameObject.GetComponent<AudioSource>().clip.name is ("playerWalk"));
+        //    {
+        //    FindObjectOfType<AudioController>().Play("playerWalk");
+        //    print("walk walk walk");
+        //    }
+        //}
+        //else if (!moving)
+        //{
+        //    print("stand stand stand");
+        //    FindObjectOfType<AudioController>().StopPlaying("playerWalk");
+        //}
 
         if (uiInfo.GetComponent<UIcontroller>().health <= 0)
         {

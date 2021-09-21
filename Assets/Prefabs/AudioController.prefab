@@ -46,7 +46,7 @@ MonoBehaviour:
   sounds:
   - name: playerSwing
     clip: {fileID: 8300000, guid: d76530269fad3574ba4094d2893b63f0, type: 3}
-    volume: 1
+    volume: 0.42
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -63,9 +63,9 @@ MonoBehaviour:
     loop: 1
     source: {fileID: 0}
   - name: enemySwing
-    clip: {fileID: 8300000, guid: 73911460c4e1de94abad1e6395c2fc08, type: 3}
-    volume: 1
-    pitch: 1
+    clip: {fileID: 8300000, guid: fc3980f7248052844b0c6d97474e1cd5, type: 3}
+    volume: 0.42
+    pitch: 0.75
     loop: 0
     source: {fileID: 0}
   - name: attackHit
