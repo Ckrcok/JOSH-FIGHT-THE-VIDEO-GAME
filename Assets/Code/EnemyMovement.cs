@@ -41,7 +41,7 @@ public class EnemyMovement : MonoBehaviour
 
     bool stepSound;
 
-    
+
     bool moving;
 
     float deathCount;
@@ -72,7 +72,7 @@ public class EnemyMovement : MonoBehaviour
        // Time.timeScale = 0.01f;
         uiInfo = GameObject.Find("Canvas");
         attackArea.position = new Vector2(0, -1);
-        
+
     }
 
     // Update is called once per frame
@@ -86,7 +86,7 @@ public class EnemyMovement : MonoBehaviour
         direction.Normalize();
         movement = direction;
 
-       
+
         //print("Current: " + movement.x + "    Last: " + lastPos);
 
 
@@ -101,7 +101,7 @@ public class EnemyMovement : MonoBehaviour
             // Destroy(gameObject);
             //Destroy(GetComponentInChildren<Transform>().gameObject);
             Debug.Log(uiInfo.GetComponent<UIcontroller>().killCount);
-            
+
             FindObjectOfType<AudioController>().StopPlaying("enemySwing");
             FindObjectOfType<AudioController>().StopPlaying("enemyWalk");
             rb.velocity = new Vector2(0, 0);
@@ -114,7 +114,7 @@ public class EnemyMovement : MonoBehaviour
             //    dead = true;
             //}
             //'health = 100;
-            //Destroy(gameObject);       
+            //Destroy(gameObject);
         }
         if (dead)
         {
@@ -198,12 +198,12 @@ public class EnemyMovement : MonoBehaviour
             if (player.CompareTag("Player") && canAttack)
             {
                 anime.SetTrigger("Attack");
-                
+
 
                 canAttack = false;
             }
         }
-        
+
         if (hit)
         {
             Collider2D[] playerInRangeDoubleCheck = Physics2D.OverlapCircleAll(attackVec, attackRange);
@@ -273,7 +273,7 @@ public class EnemyMovement : MonoBehaviour
 
     void EnemyAttack()
     {
-         
+
     }
 
     void moveCharacter(Vector2 direction)
