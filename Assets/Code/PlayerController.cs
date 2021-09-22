@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
 
     GameObject uiInfo;
 
-    int timer;
+    float timer;
 
     AudioSource footSteps;
 
@@ -38,6 +38,8 @@ public class PlayerController : MonoBehaviour
     public bool blocking;
 
     bool stepSound;
+    bool death;
+    public bool dead;
 
 
     // Start is called before the first frame update
@@ -75,7 +77,7 @@ public class PlayerController : MonoBehaviour
         {
             //print(uiInfo.GetComponent<UIcontroller>().stamina);
             speed = 6.0f;
-            uiInfo.GetComponent<UIcontroller>().stamina -= 0.25f;
+            uiInfo.GetComponent<UIcontroller>().stamina -= 16f * Time.deltaTime;
             anime.speed = 1.5f;
 
         }
@@ -84,7 +86,7 @@ public class PlayerController : MonoBehaviour
         else if (uiInfo.GetComponent<UIcontroller>().stamina <= 100)
         {
             speed = 4.0f;
-            uiInfo.GetComponent<UIcontroller>().stamina += 10.025f;
+            uiInfo.GetComponent<UIcontroller>().stamina += 15f * Time.deltaTime;
             anime.speed = 1f;
         }
 
@@ -211,8 +213,29 @@ public class PlayerController : MonoBehaviour
         //    FindObjectOfType<AudioController>().StopPlaying("playerWalk");
         //}
 
-        if (uiInfo.GetComponent<UIcontroller>().health <= 0)
+
+            if (uiInfo.GetComponent<UIcontroller>().health <= 0)
+            {
+                anime.SetTrigger("Death");
+            death = true;
+            uiInfo.GetComponent<UIcontroller>().health = 100;
+            //uiInfo.GetComponent<UIcontroller>().health = 1;
+            //death = true;
+        }
+        //else
+        //{
+        //    return;
+        //}
+        if (death)
         {
+            rb2d.velocity = new Vector2(0, 0);
+            uiInfo.GetComponent<UIcontroller>().stamina = 0;
+        }
+        if (dead)
+        {
+            //uiInfo.GetComponent<UIcontroller>().health = 100;
+            death = false;
+            uiInfo.GetComponent<UIcontroller>().stamina = 100;
             gameObject.transform.position = new Vector3(-12, 0, 2);
         }
 
@@ -228,8 +251,8 @@ public class PlayerController : MonoBehaviour
         }
         else if (damage || dodging)
         {
-            timer++;
-            if (timer is 7)
+            timer += Time.deltaTime;
+            if (timer >= 0.15f)
             {
                 dodging = false;
                 damage = false;
