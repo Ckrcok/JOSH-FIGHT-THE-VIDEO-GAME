@@ -28,9 +28,9 @@ public class EnemyMovement : MonoBehaviour
 
     public bool damaged;
 
-    int timer;
+    float timer;
 
-    int attackTimer;
+    float attackTimer;
 
     bool canAttack;
 
@@ -126,10 +126,12 @@ public class EnemyMovement : MonoBehaviour
         if (rb.velocity.x >= 0.1 || rb.velocity.x <= -0.1 || rb.velocity.y >= 0.1 || rb.velocity.y <= -0.1)
         {
             moving = true;
+
         }
         else
         {
             moving = false;
+
         }
 
         transform.GetChild(0).transform.localScale = new Vector2 (health / 150,0.05f);
@@ -182,8 +184,8 @@ public class EnemyMovement : MonoBehaviour
 
         else if (damaged)
         {
-            timer++;
-            if (timer is 5)
+            timer+=Time.deltaTime;
+            if (timer >= 0.35f)
             {
 
                 rb.velocity = new Vector2(0, 0);
@@ -254,8 +256,8 @@ public class EnemyMovement : MonoBehaviour
         if (!canAttack)
         {
             //print(attackTimer);
-            attackTimer++;
-            if (attackTimer >= 50)
+            attackTimer+= Time.deltaTime;
+            if (attackTimer >= 0.5f)
             {
                 canAttack = true;
                 attackTimer = 0;

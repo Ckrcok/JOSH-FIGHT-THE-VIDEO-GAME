@@ -896,7 +896,7 @@ AudioSource:
   m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
-  Mute: 0
+  Mute: 1
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
@@ -1327,7 +1327,7 @@ PrefabInstance:
       objectReference: {fileID: 1603721527}
     - target: {fileID: 637913062695303346, guid: 10fb3d09270ceac498c0fd32a73e204a, type: 3}
       propertyPath: attackRange
-      value: 0.5
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 637913062695303346, guid: 10fb3d09270ceac498c0fd32a73e204a, type: 3}
       propertyPath: footStepClip
@@ -1336,6 +1336,10 @@ PrefabInstance:
     - target: {fileID: 637913062695303346, guid: 10fb3d09270ceac498c0fd32a73e204a, type: 3}
       propertyPath: enemyLayers.m_Bits
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6212092795151166646, guid: 10fb3d09270ceac498c0fd32a73e204a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8437983860382098662, guid: 10fb3d09270ceac498c0fd32a73e204a, type: 3}
       propertyPath: m_RootOrder

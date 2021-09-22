@@ -235,8 +235,11 @@ public class PlayerController : MonoBehaviour
         {
             //uiInfo.GetComponent<UIcontroller>().health = 100;
             death = false;
-            uiInfo.GetComponent<UIcontroller>().stamina = 100;
+            uiInfo.GetComponent<UIcontroller>().lives--;
+            
             gameObject.transform.position = new Vector3(-12, 0, 2);
+            uiInfo.GetComponent<UIcontroller>().stamina = 100;
+            uiInfo.GetComponent<UIcontroller>().health = 100;
         }
 
 
