@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     Animator anime;
 
 
-    public AudioClip footSteps, swing;
+    public AudioClip footStepClip;
     //attack variables
     public Transform attackArea;
     public float attackRange = 0.5f;
@@ -25,9 +25,9 @@ public class PlayerController : MonoBehaviour
 
     GameObject uiInfo;
 
-    int timer;
+    float timer;
 
-
+    AudioSource footSteps;
 
     float speed = 4.0f;
 
@@ -37,10 +37,16 @@ public class PlayerController : MonoBehaviour
 
     public bool blocking;
 
+    bool stepSound;
+    bool death;
+    public bool dead;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        footSteps = FindObjectOfType<AudioController>().GetComponent<AudioSource>();
+
         damage = false;
         moving = false;
 
@@ -62,7 +68,7 @@ public class PlayerController : MonoBehaviour
         anime.SetBool("Moving", moving);
 //<<<<<<< HEAD
 //=======
-        
+
 //        //print(attack);
 //>>>>>>> 3cc007ca3db4a9bdf7b14f8ffb8f0bedef972a10
 
@@ -71,7 +77,7 @@ public class PlayerController : MonoBehaviour
         {
             //print(uiInfo.GetComponent<UIcontroller>().stamina);
             speed = 6.0f;
-            uiInfo.GetComponent<UIcontroller>().stamina -= 0.25f;
+            uiInfo.GetComponent<UIcontroller>().stamina -= 16f * Time.deltaTime;
             anime.speed = 1.5f;
 
         }
@@ -80,11 +86,11 @@ public class PlayerController : MonoBehaviour
         else if (uiInfo.GetComponent<UIcontroller>().stamina <= 100)
         {
             speed = 4.0f;
-            uiInfo.GetComponent<UIcontroller>().stamina += 0.025f;
+            uiInfo.GetComponent<UIcontroller>().stamina += 15f * Time.deltaTime;
             anime.speed = 1f;
         }
 
-        
+
         else
         {
             speed = 4.0f;
@@ -96,7 +102,7 @@ public class PlayerController : MonoBehaviour
             FindObjectOfType<AudioController>().Play("playerSwing");
             uiInfo.GetComponent<UIcontroller>().stamina -= 10;
             SlashAttack();
-            
+
         }
 
 
@@ -133,7 +139,7 @@ public class PlayerController : MonoBehaviour
         {
             moveX = 1;
             transform.eulerAngles = new Vector2(0, 0);
-            
+
 
         }
         else if (Input.GetKey(KeyCode.A))
@@ -158,33 +164,85 @@ public class PlayerController : MonoBehaviour
             moveY = 0;
         }
 
-        if(rb2d.velocity.x >0 || rb2d.velocity.x < 0 || rb2d.velocity.y > 0 || rb2d.velocity.y < 0 )
+        if (Input.GetKeyDown(KeyCode.W)||Input.GetKeyDown(KeyCode.S)||Input.GetKeyDown(KeyCode.A)||Input.GetKeyDown(KeyCode.D))
+        {
+            //if (footsteps is still playing ){return}
+
+            if (stepSound == true)
+            {
+                return;
+                //FindObjectOfType<AudioController>().GetComponent<AudioSource>().clip = otherClip;
+                //FindObjectOfType<AudioController>().GetComponent<AudioSource>().Play();
+            }
+            else
+            {
+                stepSound = true;
+                FindObjectOfType<AudioController>().Play("playerWalk");
+            }
+
+
+        }
+        else if(!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D))
+        {
+            FindObjectOfType<AudioController>().StopPlaying("playerWalk");
+            stepSound = false;
+        }
+
+
+        if(rb2d.velocity.x > 0.1f || rb2d.velocity.x < -0.1f || rb2d.velocity.y > 0.1f || rb2d.velocity.y < -0.1f)
         {
             moving = true;
 
 
         }
-        else if(rb2d.velocity.x == 0 || rb2d.velocity.y == 0)
+        else if(rb2d.velocity.x == 0 && rb2d.velocity.y == 0)
         {
             moving = false;
         }
-        if (moving)
-        {
-            if (FindObjectOfType<AudioController>().gameObject.GetComponent<AudioSource>().clip.name != "playerWalk")
+        //if (moving)
+        //{
+        //    if (FindObjectOfType<AudioController>().gameObject.GetComponent<AudioSource>().clip.name is ("playerWalk"));
+        //    {
+        //    FindObjectOfType<AudioController>().Play("playerWalk");
+        //    print("walk walk walk");
+        //    }
+        //}
+        //else if (!moving)
+        //{
+        //    print("stand stand stand");
+        //    FindObjectOfType<AudioController>().StopPlaying("playerWalk");
+        //}
+
+
+            if (uiInfo.GetComponent<UIcontroller>().health <= 0)
             {
-               
-                FindObjectOfType<AudioController>().StopPlaying("playerWalk");
-            }
+                anime.SetTrigger("Death");
+            death = true;
+            uiInfo.GetComponent<UIcontroller>().health = 100;
+            //uiInfo.GetComponent<UIcontroller>().health = 1;
+            //death = true;
+           uiInfo.GetComponent<UIcontroller>().lives--;
         }
-        else
-             FindObjectOfType<AudioController>().Play("playerWalk");
-
-        if (uiInfo.GetComponent<UIcontroller>().health <= 0)
+        //else
+        //{
+        //    return;
+        //}
+        if (death)
         {
-            gameObject.transform.position = new Vector3(-12, 0, 2);
+            rb2d.velocity = new Vector2(0, 0);
+            uiInfo.GetComponent<UIcontroller>().stamina = 0;
         }
 
 
+        if (dead)
+               {
+                   //uiInfo.GetComponent<UIcontroller>().health = 100;
+                   death = false;
+
+                   gameObject.transform.position = new Vector3(-12, 0, 2);
+                   uiInfo.GetComponent<UIcontroller>().stamina = 100;
+                   uiInfo.GetComponent<UIcontroller>().health = 100;
+               }
     }
 
     private void FixedUpdate()
@@ -196,8 +254,8 @@ public class PlayerController : MonoBehaviour
         }
         else if (damage || dodging)
         {
-            timer++;
-            if (timer is 7)
+            timer += Time.deltaTime;
+            if (timer >= 0.15f)
             {
                 dodging = false;
                 damage = false;
@@ -220,7 +278,7 @@ public class PlayerController : MonoBehaviour
     {
         anime.SetTrigger("Attack");
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackArea.position, attackRange, enemyLayers);
-        
+
 
         foreach(Collider2D enemy in hitEnemies)
         {
@@ -243,7 +301,7 @@ public class PlayerController : MonoBehaviour
 
             //enemy.gameObject.GetComponent<Rigidbody2D>().AddForce
         }
-        
+
     }
 
 
