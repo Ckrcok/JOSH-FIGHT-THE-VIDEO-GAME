@@ -68,7 +68,7 @@ public class PlayerController : MonoBehaviour
         anime.SetBool("Moving", moving);
 //<<<<<<< HEAD
 //=======
-        
+
 //        //print(attack);
 //>>>>>>> 3cc007ca3db4a9bdf7b14f8ffb8f0bedef972a10
 
@@ -90,7 +90,7 @@ public class PlayerController : MonoBehaviour
             anime.speed = 1f;
         }
 
-        
+
         else
         {
             speed = 4.0f;
@@ -102,7 +102,7 @@ public class PlayerController : MonoBehaviour
             FindObjectOfType<AudioController>().Play("playerSwing");
             uiInfo.GetComponent<UIcontroller>().stamina -= 10;
             SlashAttack();
-            
+
         }
 
 
@@ -139,7 +139,7 @@ public class PlayerController : MonoBehaviour
         {
             moveX = 1;
             transform.eulerAngles = new Vector2(0, 0);
-            
+
 
         }
         else if (Input.GetKey(KeyCode.A))
@@ -167,7 +167,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W)||Input.GetKeyDown(KeyCode.S)||Input.GetKeyDown(KeyCode.A)||Input.GetKeyDown(KeyCode.D))
         {
             //if (footsteps is still playing ){return}
-           
+
             if (stepSound == true)
             {
                 return;
@@ -179,7 +179,7 @@ public class PlayerController : MonoBehaviour
                 stepSound = true;
                 FindObjectOfType<AudioController>().Play("playerWalk");
             }
-            
+
 
         }
         else if(!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D))
@@ -221,6 +221,7 @@ public class PlayerController : MonoBehaviour
             uiInfo.GetComponent<UIcontroller>().health = 100;
             //uiInfo.GetComponent<UIcontroller>().health = 1;
             //death = true;
+           uiInfo.GetComponent<UIcontroller>().lives--;
         }
         //else
         //{
@@ -231,6 +232,7 @@ public class PlayerController : MonoBehaviour
             rb2d.velocity = new Vector2(0, 0);
             uiInfo.GetComponent<UIcontroller>().stamina = 0;
         }
+<<<<<<< HEAD
         if (dead)
         {
             //uiInfo.GetComponent<UIcontroller>().health = 100;
@@ -241,8 +243,19 @@ public class PlayerController : MonoBehaviour
             uiInfo.GetComponent<UIcontroller>().stamina = 100;
             uiInfo.GetComponent<UIcontroller>().health = 100;
         }
+=======
+>>>>>>> main
 
 
+        if (dead)
+               {
+                   //uiInfo.GetComponent<UIcontroller>().health = 100;
+                   death = false;
+
+                   gameObject.transform.position = new Vector3(-12, 0, 2);
+                   uiInfo.GetComponent<UIcontroller>().stamina = 100;
+                   uiInfo.GetComponent<UIcontroller>().health = 100;
+               }
     }
 
     private void FixedUpdate()
@@ -278,7 +291,7 @@ public class PlayerController : MonoBehaviour
     {
         anime.SetTrigger("Attack");
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackArea.position, attackRange, enemyLayers);
-        
+
 
         foreach(Collider2D enemy in hitEnemies)
         {
@@ -301,7 +314,7 @@ public class PlayerController : MonoBehaviour
 
             //enemy.gameObject.GetComponent<Rigidbody2D>().AddForce
         }
-        
+
     }
 
 
