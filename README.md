@@ -1,7 +1,7 @@
 
 
 <p align="center">
-<a href="https://github.com/Ckrcok/JOSH-FIGHT-THE-VIDEO-GAME">
+<a href="https://ckrcok.github.io/JOSH-FIGHT-THE-VIDEO-GAME/">
   <img src="https://raw.githubusercontent.com/Ckrcok/JOSH-FIGHT-THE-VIDEO-GAME/main/Assets/Sprites/Josh%20Fight%20One%20Up%20v1.png" width="150" title="hover text">
   </a>
 </p>
@@ -18,6 +18,13 @@ The game was develop for game jam in the program of <a href="https://mediaarts.h
 To View Our Project Documentation Click on The Book <a href ="https://docs.google.com/document/d/1-xEH_DGoglEEbAaSQ8y95tqK2gbJKjUk6SJT4-Sk64w/edit?usp=sharing"> :open_book:</a>
 
 Click On <code><a href="https://trello.com/b/Ngn0n74r/josh-fight-the-video-game"><img src="https://github.com/devicons/devicon/blob/master/icons/trello/trello-plain-wordmark.svg" alt="trello board" width="60" height="60"/></a></code> To Go To Our Public Trello Board
+
+
+<h1 align="center">
+Click On The Logo To Play The Game Online
+</h1>
+<hr>
+<h1 align="center">Josh Fight - The Video Game</h1>
 
 ## About the team :star2:
 
@@ -52,7 +59,7 @@ The team Josh consists of <a href="https://www.linkedin.com/in/dorz/">Dor Zairi<
 <a href="https://medibangpaint.fandom.com/wiki/MediBang_Paint_Wikia"><img src="https://medibangpaint.com/favicon.ico" alt="MediBang" width="20" height="20"/></a> - MediBang
 
 
-# Show Case 
+# Show Case
 
 ### Attack
 
