@@ -7,6 +7,8 @@
 </p>
 <h1 align="center">Josh Fight - The Video Game</h1>
 
+[<img  src="https://i.ytimg.com/vi/q-aD6699XV4/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB-PElcpgnyJhQpApIzNaU5QXMbFg" align="center" width="100%">](https://www.youtube.com/embed/q-aD6699XV4)
+
 
 ## About :information_source:
 Our Game is based on the meme event "<a href="https://en.wikipedia.org/wiki/Josh_fight">Josh Fight</a>", that occurred in April 2021. writing in C# and use the Unity Engine.
