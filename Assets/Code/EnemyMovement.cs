@@ -24,6 +24,11 @@ public class EnemyMovement : MonoBehaviour
 
     float lastPos;
 
+    //public GameObject healthPickup, staminaPickup;
+
+    public GameObject[] pickups;
+
+
     public float health;
 
     public bool damaged;
@@ -120,7 +125,13 @@ public class EnemyMovement : MonoBehaviour
         {
             print("death");
             uiInfo.GetComponent<UIcontroller>().killCount++;
-                Destroy(gameObject);
+            if (Random.Range(0, 2) == 1)
+            {
+                Instantiate(pickups[Random.Range(0, 2)],rb.position,transform.rotation,GameObject.Find("Pickups").transform);
+            }
+            
+            //string[] pickups = { "healthPickup", "staminaPickup" };
+            Destroy(gameObject);
         }
 
         if (rb.velocity.x >= 0.1 || rb.velocity.x <= -0.1 || rb.velocity.y >= 0.1 || rb.velocity.y <= -0.1)
@@ -185,11 +196,12 @@ public class EnemyMovement : MonoBehaviour
         else if (damaged)
         {
             timer+=Time.deltaTime;
-            if (timer >= 0.35f)
+            beenHit = false;
+            if (timer >= 0.25f)
             {
 
                 rb.velocity = new Vector2(0, 0);
-                beenHit = false;
+
                 damaged = false;
                 timer = 0;
 

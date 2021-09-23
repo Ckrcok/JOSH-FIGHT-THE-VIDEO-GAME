@@ -19,7 +19,7 @@ public class Spawner : MonoBehaviour
         if (enemies.Length == 0)
         {
            // Instantiate(enemyPrefab, transform);
-            Instantiate(enemyPrefab, new Vector3(Random.Range(-5,5),-8), transform.rotation, transform);
+            Instantiate(enemyPrefab, new Vector3(Random.Range(-5,5),-10), transform.rotation, transform);
 
         }
     }

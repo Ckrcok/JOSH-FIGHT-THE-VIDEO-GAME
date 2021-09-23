@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
 
     AudioSource footSteps;
 
-    float speed = 4.0f;
+    float speed = 2.0f;
 
     bool moving;
 
@@ -76,7 +76,7 @@ public class PlayerController : MonoBehaviour
         if (uiInfo.GetComponent<UIcontroller>().stamina > 0f && Input.GetKey(KeyCode.LeftShift))
         {
             //print(uiInfo.GetComponent<UIcontroller>().stamina);
-            speed = 6.0f;
+            speed = 4f;
             uiInfo.GetComponent<UIcontroller>().stamina -= 16f * Time.deltaTime;
             anime.speed = 1.5f;
 
@@ -85,15 +85,15 @@ public class PlayerController : MonoBehaviour
 
         else if (uiInfo.GetComponent<UIcontroller>().stamina <= 100)
         {
-            speed = 4.0f;
-            uiInfo.GetComponent<UIcontroller>().stamina += 15f * Time.deltaTime;
+            speed = 3f;
+            uiInfo.GetComponent<UIcontroller>().stamina += 10f * Time.deltaTime;
             anime.speed = 1f;
         }
 
 
         else
         {
-            speed = 4.0f;
+            speed = 3f;
             anime.speed = 1f;
         }
 
@@ -232,19 +232,19 @@ public class PlayerController : MonoBehaviour
             rb2d.velocity = new Vector2(0, 0);
             uiInfo.GetComponent<UIcontroller>().stamina = 0;
         }
-<<<<<<< HEAD
-        if (dead)
-        {
-            //uiInfo.GetComponent<UIcontroller>().health = 100;
-            death = false;
-            uiInfo.GetComponent<UIcontroller>().lives--;
+//<<<<<<< HEAD
+//        if (dead)
+//        {
+//            //uiInfo.GetComponent<UIcontroller>().health = 100;
+//            death = false;
+//            uiInfo.GetComponent<UIcontroller>().lives--;
             
-            gameObject.transform.position = new Vector3(-12, 0, 2);
-            uiInfo.GetComponent<UIcontroller>().stamina = 100;
-            uiInfo.GetComponent<UIcontroller>().health = 100;
-        }
-=======
->>>>>>> main
+//            gameObject.transform.position = new Vector3(-12, 0, 2);
+//            uiInfo.GetComponent<UIcontroller>().stamina = 100;
+//            uiInfo.GetComponent<UIcontroller>().health = 100;
+//        }
+//=======
+//>>>>>>> main
 
 
         if (dead)
