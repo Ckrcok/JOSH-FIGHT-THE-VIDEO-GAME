@@ -104,11 +104,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   moveSpeed: 4
-  attackRange: 1
-  bufferDistance: 0.9
+  attackRange: 1.1
+  bufferDistance: 1
   playerLayer:
     serializedVersion: 2
     m_Bits: 0
+  pickups:
+  - {fileID: 8287966199769556161, guid: ba4cf3803d8780b4c95ddf064685a674, type: 3}
+  - {fileID: 1820290386060166305, guid: e3a73aa2e11a43247abae4786bfcf19a, type: 3}
+  - {fileID: 8287966199769556161, guid: ba4cf3803d8780b4c95ddf064685a674, type: 3}
   health: 0
   damaged: 0
   dead: 0

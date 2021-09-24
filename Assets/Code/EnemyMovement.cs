@@ -24,13 +24,18 @@ public class EnemyMovement : MonoBehaviour
 
     float lastPos;
 
+    //public GameObject healthPickup, staminaPickup;
+
+    public GameObject[] pickups;
+
+
     public float health;
 
     public bool damaged;
 
-    int timer;
+    float timer;
 
-    int attackTimer;
+    float attackTimer;
 
     bool canAttack;
 
@@ -120,16 +125,24 @@ public class EnemyMovement : MonoBehaviour
         {
             print("death");
             uiInfo.GetComponent<UIcontroller>().killCount++;
-                Destroy(gameObject);
+            if (Random.Range(0, 2) == 1)
+            {
+                Instantiate(pickups[Random.Range(0, 2)],rb.position,transform.rotation,GameObject.Find("Pickups").transform);
+            }
+            
+            //string[] pickups = { "healthPickup", "staminaPickup" };
+            Destroy(gameObject);
         }
 
         if (rb.velocity.x >= 0.1 || rb.velocity.x <= -0.1 || rb.velocity.y >= 0.1 || rb.velocity.y <= -0.1)
         {
             moving = true;
+
         }
         else
         {
             moving = false;
+
         }
 
         transform.GetChild(0).transform.localScale = new Vector2 (health / 150,0.05f);
@@ -182,12 +195,13 @@ public class EnemyMovement : MonoBehaviour
 
         else if (damaged)
         {
-            timer++;
-            if (timer is 5)
+            timer+=Time.deltaTime;
+            beenHit = false;
+            if (timer >= 0.25f)
             {
 
                 rb.velocity = new Vector2(0, 0);
-                beenHit = false;
+
                 damaged = false;
                 timer = 0;
 
@@ -254,8 +268,8 @@ public class EnemyMovement : MonoBehaviour
         if (!canAttack)
         {
             //print(attackTimer);
-            attackTimer++;
-            if (attackTimer >= 50)
+            attackTimer+= Time.deltaTime;
+            if (attackTimer >= 0.5f)
             {
                 canAttack = true;
                 attackTimer = 0;
